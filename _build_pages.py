@@ -83,7 +83,7 @@ def strip_runtime(html):
     # content is baked in now — drop the runtime translation bundle, keep the
     # (navigation-only) switcher, and bust its cache.
     html = re.sub(r'\n\s*<script src="[^"]*i18n\.js[^"]*"></script>', '', html, count=1)
-    html = html.replace('lang.js?v=1.9', 'lang.js?v=1.10')
+    html = html.replace('lang.js?v=1.10', 'lang.js?v=2.1')
     return html
 
 

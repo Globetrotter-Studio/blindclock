@@ -28,8 +28,8 @@
     "zh-Hant": "前往 App Store 下載"
   },
   "i8": {
-    "en": "Version 1.9 · iOS 18.6+ · iPhone &amp; iPad",
-    "zh-Hant": "版本 1.9 · iOS 18.6+ · iPhone 與 iPad"
+    "en": "Version 2.1 · iOS 18.6+ · iPhone &amp; iPad",
+    "zh-Hant": "版本 2.1 · iOS 18.6+ · iPhone 與 iPad"
   },
   "i9": {
     "en": "Everything a host needs",
@@ -104,8 +104,8 @@
     "zh-Hant": "賽事範本在 iPhone 與 iPad 之間自動同步——所有人免費使用。"
   },
   "i27": {
-    "en": "What’s new in 1.9",
-    "zh-Hant": "1.9 版更新內容"
+    "en": "What’s new in 2.1",
+    "zh-Hant": "2.1 有什麼新功能"
   },
   "i41": {
     "en": "The free version is fully playable — timer, Live Activity, generator, payouts, sync, and up to 5 custom tournaments. Pro removes the limit with one purchase, forever, on all your devices.",
@@ -156,8 +156,8 @@
     "zh-Hant": "支援"
   },
   "s4": {
-    "en": "BlindClock 1.9 · We usually reply within a few days.",
-    "zh-Hant": "BlindClock 1.9 · 我們通常會在幾天內回覆。"
+    "en": "BlindClock 2.1 · We usually reply within a few days.",
+    "zh-Hant": "BlindClock 2.1 · 我們通常會在幾天內回覆。"
   },
   "s5": {
     "en": "Need a hand?",
@@ -284,28 +284,28 @@
     "zh-Hant": "BlindClock 是一款獨立開發的 App。本隱私權政策適用於 BlindClock iOS 應用程式。"
   },
   "i28a": {
-    "en": "Now in 12 languages",
-    "zh-Hant": "支援 12 種語言"
+    "en": "Live table stats",
+    "zh-Hant": "即時牌桌數據"
   },
   "i28b": {
-    "en": "the app, this site, and the App Store page are fully localized:",
-    "zh-Hant": "App、本網站與 App Store 產品頁皆已完整在地化："
+    "en": "see the average stack, players remaining, and the average stack in big blinds update with every level — right on the clock.",
+    "zh-Hant": "在牌桌畫面就能看到平均籌碼、剩餘人數，以及平均籌碼換算成幾個大盲，每一級即時更新。"
   },
   "i29a": {
-    "en": "Run tournaments in your language",
-    "zh-Hant": "用你的語言主持牌局"
+    "en": "Know exactly when to color up",
+    "zh-Hant": "一眼看出何時該換大額籌碼"
   },
   "i29b": {
-    "en": "every screen, from the blind structure generator to payouts, now speaks your language end to end.",
-    "zh-Hant": "從盲注結構產生器到獎池計算，每個畫面都用你的語言，從頭到尾。"
+    "en": "the number serious hosts watch: when to color up, when to talk a deal, how the tournament is really pacing. Tap to bust a player. Free for everyone.",
+    "zh-Hant": "賽事總監真正在盯的數字：何時換大額籌碼、何時談分錢、整場節奏快慢。有人出局時點一下就能淘汰。所有人免費。"
   },
   "i30a": {
-    "en": "Polish & fixes",
-    "zh-Hant": "細節打磨與修正"
+    "en": "Faster launch & polish",
+    "zh-Hant": "啟動更快、體驗更精緻"
   },
   "i30b": {
-    "en": "refinements across the app.",
-    "zh-Hant": "全 App 體驗優化。"
+    "en": "a refreshed launch screen and refinements across the app.",
+    "zh-Hant": "全新啟動畫面，加上全 App 各處的細節打磨。"
   },
   "pv1": {
     "en": "BlindClock — Privacy Policy",
