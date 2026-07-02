@@ -1,3 +1,9 @@
+# BlindClock — deliberately open to ALL crawlers, including AI answer
+# engines (OAI-SearchBot, Bingbot, Googlebot, PerplexityBot,
+# Claude-SearchBot, Applebot, ...). Blocking them removes the site from
+# ChatGPT / Perplexity / Claude / AI Overviews / Siri answers — keep open.
+# Strategy notes: docs/product/seo-geo.md in the app repo.
+
 User-agent: *
 Allow: /
 

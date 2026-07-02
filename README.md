@@ -4,6 +4,14 @@ GitHub Pages site for the BlindClock iOS app, served on the custom domain **`bli
 (see `CNAME`). Three pages × 12 languages, **pre-rendered** into per-language folders by
 `_build_pages.py` — each language is a real, indexable URL (good for SEO). There IS a build step now.
 
+The build also generates the whole **SEO/GEO layer** (strategy + follow-ups in
+`../docs/product/seo-geo.md`): canonical + hreflang (incl. `es`/`pt` generic aliases),
+localized Open Graph/Twitter tags, JSON-LD (SoftwareApplication on index, FAQPage on
+support — extracted from the baked translations), `sitemap.xml` with honest `<lastmod>`
+(git dates), `robots.txt` (deliberately open to AI crawlers — do NOT add Disallow rules),
+and `llms.txt`. Static extras at the root: `404.html`, `favicon.ico`, `assets/og.png`
+(1200×630 share card), and the IndexNow key file `60e56452e51f4aacb43c99f544b5f1f5.txt`.
+
 ## Pages & App Store Connect URLs (English / canonical)
 
 | Page | File | Live URL | Used as |
@@ -51,8 +59,23 @@ When a new version (e.g. 1.11) ships, update:
    If changed, also bump the “Effective date” (`pv2`) in every language.
 4. **Translations:** after editing any English string, update its translation for all 11 other languages (edit `_web_source.json` + `python3 _build_i18n.py`, or edit `assets/i18n.js` directly).
 5. Fill in the real App Store URL in `index.html` (`store-badge` link) once the app page is live.
-6. **Rebuild:** `python3 _build_pages.py` — regenerates all 36 pages + `sitemap.xml`. (If titles/descriptions changed, edit `_meta_i18n.json` first.)
+6. **Rebuild:** `python3 _build_pages.py` — regenerates all 36 pages + `sitemap.xml` +
+   `robots.txt` + `llms.txt`, with JSON-LD/OG refreshed and the app version parsed from
+   the hero pill (`i8`). (If titles/descriptions changed, edit `_meta_i18n.json` first —
+   it also feeds `og:title`/`og:description` and the SoftwareApplication description.)
 7. Commit and push to `main` (include the regenerated `<slug>/` folders + `sitemap.xml`) — GitHub Pages deploys automatically.
+8. **IndexNow ping (after the deploy is live):** tells Bing (→ Copilot + ChatGPT search)
+   about the changed pages in hours instead of weeks. Only ping URLs that actually changed:
+
+   ```sh
+   curl -s -X POST https://api.indexnow.org/indexnow \
+     -H 'Content-Type: application/json; charset=utf-8' \
+     -d '{"host":"blindclock.app","key":"60e56452e51f4aacb43c99f544b5f1f5",
+          "keyLocation":"https://blindclock.app/60e56452e51f4aacb43c99f544b5f1f5.txt",
+          "urlList":["https://blindclock.app/","https://blindclock.app/support.html"]}'
+   ```
+
+   (Add the `<slug>/` variants of whichever pages changed; 200/202 = accepted.)
 
 ## Local preview
 

@@ -362,6 +362,12 @@ details.faq summary {
 
 details.faq summary::-webkit-details-marker { display: none; }
 
+details.faq summary h3 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
 details.faq summary::before {
   content: "♠";
   color: var(--gold);
@@ -420,6 +426,13 @@ footer .foot-links {
   gap: 20px;
   margin-bottom: 12px;
 }
+
+footer .foot-langs {
+  margin-bottom: 12px;
+  line-height: 2;
+}
+
+footer .foot-langs a { white-space: nowrap; }
 
 footer a {
   color: var(--muted);
