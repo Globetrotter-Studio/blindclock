@@ -48,6 +48,11 @@ OG_IMAGE = SITE + "/assets/og.png"       # 1200x630 share card
 PAGES = ["index.html", "privacy.html", "support.html"]
 PAGEKEY = {"index.html": "index", "privacy.html": "privacy", "support.html": "support"}
 
+# English-only pages at the root — a deliberate hreflang exception (they carry
+# their own static head with en + x-default only, and are NOT run through the
+# 12-language loop). They still get a sitemap entry (no alternates) + llms.txt.
+EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html"]
+
 # code (matches BC_STRINGS / _meta_i18n.json), URL slug, BCP-47 hreflang,
 # dropdown label, Open Graph locale. en uses slug "" (root).
 # Keep in sync with assets/lang.js.
@@ -79,6 +84,12 @@ FEATURE_LIST = [
     "Live table stats",
     "iCloud sync",
 ]
+
+# homepage screenshots: assets/screens/<code>/<name>.webp exists per language
+# (framed App Store shots, localized headlines baked in — see Preview and
+# screenshot/2.1 in the app repo). The English template references the en/
+# folder; localize_screens() repoints the src per language.
+SCREENSHOT_FILES = ["stats.webp", "generator.webp", "payouts.webp"]
 
 HEAD_START = "<!--BC_I18N_HEAD_START-->"
 HEAD_END = "<!--BC_I18N_HEAD_END-->"
@@ -114,6 +125,33 @@ def translate_body(html, code, bc):
         return open_tag + d.get(key, inner) + close   # fall back to English inner
 
     return I18N_RE.sub(repl, html)
+
+
+# <img ... data-i18n-alt="key" ... alt="English text" ...> — swap the alt per language
+ALT_IMG_RE = re.compile(r'<img\b[^>]*\bdata-i18n-alt="([^"]+)"[^>]*>')
+
+
+def translate_alts(html, code, bc):
+    if code == "en":
+        return html
+    d = bc.get(code, {})
+
+    def repl(m):
+        tag, key = m.group(0), m.group(1)
+        val = d.get(key)
+        if not val:
+            return tag   # fall back to English alt
+        # (?<!-) so we replace alt="…" but never the tail of data-i18n-alt="…"
+        return re.sub(r'(?<!-)\balt="[^"]*"', 'alt="%s"' % htmllib.escape(htmllib.unescape(val), quote=True), tag, count=1)
+
+    return ALT_IMG_RE.sub(repl, html)
+
+
+def localize_screens(html, code):
+    """Point homepage screenshot srcs at the language's own framed shots."""
+    if code == "en":
+        return html
+    return html.replace("assets/screens/en/", "assets/screens/%s/" % code)
 
 
 def strip_runtime(html):
@@ -199,7 +237,7 @@ def jsonld_script(graph):
     return '  <script type="application/ld+json">%s</script>' % payload
 
 
-def jsonld_index(slug, hreflang, meta_entry, app_version, min_os, lastmod):
+def jsonld_index(code, slug, hreflang, meta_entry, app_version, min_os, lastmod):
     org = {
         "@type": "Organization",
         "@id": SITE + "/#org",
@@ -230,6 +268,7 @@ def jsonld_index(slug, hreflang, meta_entry, app_version, min_os, lastmod):
         "inLanguage": hreflang,
         "installUrl": APPSTORE_URL,
         "sameAs": [APPSTORE_URL],
+        "screenshot": ["%s/assets/screens/%s/%s" % (SITE, code, f) for f in SCREENSHOT_FILES],
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -308,7 +347,7 @@ def rewrite_assets(html):
     return html.replace('"assets/', '"../assets/').replace("(assets/", "(../assets/")
 
 
-def write_sitemap(lastmods):
+def write_sitemap(lastmods, extra_lastmods):
     urls = []
     for page in PAGES:
         alt = "".join('\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (hl, href)
@@ -316,6 +355,9 @@ def write_sitemap(lastmods):
         for _c, slug, _hl, _l, _og in LANGS:
             urls.append("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>"
                         % (page_url(page, slug), lastmods[page], alt))
+    for page in EXTRA_EN_PAGES:   # English-only: no hreflang alternates
+        urls.append("  <url>\n    <loc>%s/%s</loc>\n    <lastmod>%s</lastmod>\n  </url>"
+                    % (SITE, page, extra_lastmods[page]))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
@@ -349,8 +391,9 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 
 ## Pages
 
-- [Home](%s/): features and what's new in the latest version
-- [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, supported devices
+- [Home](%s/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
+- [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
+- [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
 - [Privacy Policy](%s/privacy.html): no account, no ads, anonymous analytics only
 
 ## App Store
@@ -360,7 +403,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 ## Languages
 
 English lives at the site root; the same three pages exist under each slug: %s.
-""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, APPSTORE_URL, langs_line)
+""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, SITE, APPSTORE_URL, langs_line)
     open(os.path.join(WEB, "llms.txt"), "w", encoding="utf-8").write(txt)
 
 
@@ -371,8 +414,8 @@ def main():
     app_version, min_os = parse_app_facts(templates["index.html"])
     lastmods = compute_lastmods()
 
-    # coverage check: every data-i18n key should exist in every non-English language
-    keys = set(re.findall(r'data-i18n="([^"]+)"', "".join(templates.values())))
+    # coverage check: every data-i18n / data-i18n-alt key should exist in every non-English language
+    keys = set(re.findall(r'data-i18n(?:-alt)?="([^"]+)"', "".join(templates.values())))
     for code, _s, _hl, _l, _og in LANGS:
         if code == "en":
             continue
@@ -389,12 +432,14 @@ def main():
         os.makedirs(outdir, exist_ok=True)
         for page in PAGES:
             html = translate_body(templates[page], code, bc)
+            html = translate_alts(html, code, bc)
+            html = localize_screens(html, code)
             html = strip_runtime(html)
             html = set_html_lang(html, hreflang)
             m = meta[PAGEKEY[page]].get(code, meta[PAGEKEY[page]]["en"])
             html = set_meta(html, m)
             if page == "index.html":
-                jld = jsonld_index(slug, hreflang, m, app_version, min_os, lastmods[page])
+                jld = jsonld_index(code, slug, hreflang, m, app_version, min_os, lastmods[page])
             elif page == "support.html":
                 jld = jsonld_faq(slug, hreflang, extract_faq(html))
             else:
@@ -405,10 +450,12 @@ def main():
             open(os.path.join(outdir, page), "w", encoding="utf-8").write(html)
             written.append(os.path.relpath(os.path.join(outdir, page), WEB))
 
-    write_sitemap(lastmods)
+    extra_lastmods = {p: git_date([p, "_build_pages.py"]) for p in EXTRA_EN_PAGES}
+    write_sitemap(lastmods, extra_lastmods)
     write_robots()
     write_llms(app_version, min_os, lastmods)
     print("=== WROTE %d pages + sitemap.xml + robots.txt + llms.txt ===" % len(written))
+    print("  extra en-only pages in sitemap: " + ", ".join(EXTRA_EN_PAGES))
     print("  app %s · %s · lastmod %s" % (app_version, min_os, ", ".join("%s=%s" % (PAGEKEY[p], d) for p, d in lastmods.items())))
     print("  langs: " + ", ".join("%s→/%s" % (c, s or "(root)") for c, s, _h, _l, _og in LANGS))
     return 0

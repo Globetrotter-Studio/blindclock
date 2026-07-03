@@ -259,6 +259,38 @@
     "en": "BlindClock is an independent poker tournament blind timer and tournament clock app for iPhone & iPad.",
     "zh-Hant": "BlindClock 是一款獨立開發的撲克錦標賽盲注計時器(錦標賽時鐘)App,適用於 iPhone 與 iPad。"
   },
+  "s30": {
+    "en": "How long should poker blind levels be?",
+    "zh-Hant": "撲克盲注每級該設多長時間？"
+  },
+  "s31": {
+    "en": "Use 15–20 minute blind levels for a fast turbo game, 20–30 minutes for a standard home tournament, and 30–45 minutes or more for a deep-stack event. Shorter levels end the night sooner but force more all-ins; longer levels leave more room for real play. BlindClock’s generator picks a level length from your target duration automatically, and you can fine-tune every level afterwards.",
+    "zh-Hant": "快速的 Turbo 賽每級 15–20 分鐘，標準家庭賽 20–30 分鐘，深籌碼賽事則用 30–45 分鐘以上。級別越短散場越早，但玩家更常被迫全下；級別越長，越有空間打真正的技術牌。BlindClock 的產生器會依你的目標時長自動選好級別長度，之後仍可逐級微調。"
+  },
+  "s32": {
+    "en": "What payout structure should a home tournament use?",
+    "zh-Hant": "家庭錦標賽的獎金該怎麼分配？"
+  },
+  "s33": {
+    "en": "For 10 players or fewer, pay the top three finishers 50/30/20 percent of the prize pool; for 11–20 players, pay four places — roughly 50/25/15/10. A good rule of thumb is that about one in five entrants should get paid. BlindClock’s payout calculator applies the split to your buy-ins and rebuys on the spot, so the exact amounts are ready before the final hand.",
+    "zh-Hant": "10 人以內取前三名，按獎池的 50/30/20 比例分配；11–20 人取前四名，約 50/25/15/10。經驗法則是大約每 5 位參賽者就有 1 人獲獎。BlindClock 的獎池計算器會把這個比例即時套用到買入與重買上，最後一手開打前，各名次的確切金額就已經算好。"
+  },
+  "s34": {
+    "en": "How many chips does each player need?",
+    "zh-Hant": "每位玩家需要多少籌碼？"
+  },
+  "s35": {
+    "en": "Plan on about 50 chips per player, with the starting big blind at roughly 1% of the starting stack — for example, a 5,000 stack with 25/50 blinds gives everyone a comfortable 100 big blinds. Three or four denominations are plenty; color up the smallest chips once they’re no longer needed. BlindClock’s live table stats show the average stack in big blinds, so you always know where the game stands.",
+    "zh-Hant": "抓每人約 50 枚籌碼，起始大盲設為起始籌碼的 1% 左右——例如 5,000 起始籌碼配 25/50 盲注，每個人都有寬裕的 100 個大盲。三到四種面額就很夠用；最小面額用不到時就換成大額籌碼。BlindClock 的即時牌桌統計會顯示平均籌碼換算成幾個大盲，牌局走到哪裡一目了然。"
+  },
+  "s36": {
+    "en": "How do I create a blind structure?",
+    "zh-Hant": "盲注結構要怎麼設計？"
+  },
+  "s37": {
+    "en": "The easiest way is BlindClock’s built-in generator: enter your player count, chips, and target duration, and it builds a clean casino-style structure with breaks in one tap. A good structure raises blinds by roughly 25–50% per level and keeps the numbers round. You can edit every level, add breaks, and save the result as a template to reuse or share.",
+    "zh-Hant": "最快的方法是用 BlindClock 內建的盲注結構產生器：輸入人數、籌碼與目標時長，一鍵產生含休息時段、賭場風格的漂亮結構。好的結構大約每級把盲注調升 25–50%，並讓數字保持乾淨好唸。每一級都能再編輯、自由加入休息時段，也能把成果存成範本，重複使用或分享給牌友。"
+  },
   "p1": {
     "en": "Home",
     "zh-Hant": "首頁"
@@ -306,6 +338,70 @@
   "i30b": {
     "en": "a refreshed launch screen and refinements across the app.",
     "zh-Hant": "全新啟動畫面，加上全 App 各處的細節打磨。"
+  },
+  "i50": {
+    "en": "See it in action",
+    "zh-Hant": "看看實際畫面"
+  },
+  "i51": {
+    "en": "Live table stats — average stack, players left, and big blinds, right on the clock.",
+    "zh-Hant": "即時牌桌統計——平均籌碼、剩餘人數、大盲數,直接顯示在時鐘上。"
+  },
+  "i52": {
+    "en": "BlindClock poker tournament clock with live table stats: blinds, countdown, average stack and players left",
+    "zh-Hant": "BlindClock 撲克錦標賽時鐘,顯示盲注、倒數與即時牌桌統計:平均籌碼與剩餘人數"
+  },
+  "i53": {
+    "en": "Tell the generator your players, chips, and length — it builds the structure.",
+    "zh-Hant": "告訴產生器人數、籌碼與時長,結構自動生成。"
+  },
+  "i54": {
+    "en": "Blind structure generator with one-tap level durations and a casino-style blind schedule",
+    "zh-Hant": "盲注結構產生器,一鍵選擇級別長度,自動產生賭場風格盲注表"
+  },
+  "i55": {
+    "en": "Buy-ins and rebuys become an instant prize pool and payouts.",
+    "zh-Hant": "買入與重買即時變成獎池與各名次獎金。"
+  },
+  "i56": {
+    "en": "Poker payout calculator showing prize pool and instant first, second and third place amounts",
+    "zh-Hant": "撲克獎池計算器,顯示總獎池與冠亞季軍即時金額"
+  },
+  "i57": {
+    "en": "Sample blind structures",
+    "zh-Hant": "範例盲注結構"
+  },
+  "i58": {
+    "en": "What a clean structure looks like: a turbo wraps up in about 1.5 hours, a standard home game in about 3, a deep-stack event in 4.5 or more. BlindClock’s generator builds one for your exact player count, chips, and target length in one tap.",
+    "zh-Hant": "一份漂亮的結構長這樣:快速賽約 1.5 小時打完,標準家庭賽約 3 小時,深籌碼賽事 4.5 小時以上。BlindClock 的產生器會照你的人數、籌碼與目標時長,一鍵生成專屬結構。"
+  },
+  "i59": {
+    "en": "Level",
+    "zh-Hant": "級別"
+  },
+  "i60": {
+    "en": "Turbo · 15 min",
+    "zh-Hant": "快速 · 15 分鐘"
+  },
+  "i61": {
+    "en": "Standard · 20 min",
+    "zh-Hant": "標準 · 20 分鐘"
+  },
+  "i62": {
+    "en": "Deepstack · 30 min",
+    "zh-Hant": "深籌碼 · 30 分鐘"
+  },
+  "i63": {
+    "en": "Starting stack",
+    "zh-Hant": "起始籌碼"
+  },
+  "i64": {
+    "en": "Blinds are shown as small blind / big blind. Add a 10-minute break every four or five levels — BlindClock’s generator places them automatically.",
+    "zh-Hant": "盲注格式為小盲 / 大盲。每四到五級加一次 10 分鐘休息——BlindClock 的產生器會自動排好。"
+  },
+  "i65": {
+    "en": "Read the full guide: how to run a home poker tournament →",
+    "zh-Hant": "閱讀完整指南(英文):如何舉辦一場家庭撲克錦標賽 →"
   },
   "pv1": {
     "en": "BlindClock — Privacy Policy",

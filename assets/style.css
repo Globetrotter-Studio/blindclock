@@ -238,6 +238,99 @@ section { padding: 48px 0; }
   font-size: 14.5px;
 }
 
+/* ---- Screenshots ---- */
+.screens {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.screens figure.screen {
+  margin: 0;
+  flex: 0 1 260px;
+  max-width: 290px;
+  text-align: center;
+}
+
+.screens img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.screens figcaption {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 0 6px;
+}
+
+/* ---- Sample blind structures ---- */
+.table-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background: linear-gradient(160deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+table.structures {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+
+table.structures th,
+table.structures td {
+  padding: 9px 14px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+table.structures thead th {
+  border-top: none;
+  color: var(--gold-bright);
+  font-size: 13.5px;
+  letter-spacing: 0.3px;
+}
+
+table.structures tbody th[scope="row"] {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+table.structures td {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+table.structures tr.meta-row th,
+table.structures tr.meta-row td {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.table-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13.5px;
+  max-width: 640px;
+  margin: 14px auto 0;
+}
+
+.table-note a {
+  color: var(--gold-bright);
+  text-decoration: none;
+}
+
+.table-note a:hover { text-decoration: underline; }
+
 /* ---- What's new ---- */
 .whatsnew {
   background: linear-gradient(160deg, var(--panel-2), var(--panel));
