@@ -83,6 +83,8 @@ FEATURE_LIST = [
     "iPad table display",
     "Live table stats",
     "iCloud sync",
+    "Big Screen Mode on TV or projector (Pro)",
+    "ICM chop and payout templates (Pro)",
 ]
 
 # homepage screenshots: assets/screens/<code>/<name>.webp exists per language
@@ -158,7 +160,7 @@ def strip_runtime(html):
     # content is baked in now — drop the runtime translation bundle, keep the
     # (navigation-only) switcher, and bust its cache.
     html = re.sub(r'\n\s*<script src="[^"]*i18n\.js[^"]*"></script>', '', html, count=1)
-    html = html.replace('lang.js?v=1.10', 'lang.js?v=2.1')
+    html = html.replace('lang.js?v=1.10', 'lang.js?v=2.3')
     return html
 
 
@@ -194,7 +196,7 @@ def parse_app_facts(index_template):
     pill = pill.group(1) if pill else ""
     ver = re.search(r"Version\s+([0-9.]+)", pill)
     min_os = re.search(r"iOS\s+([0-9.]+)\+", pill)
-    return (ver.group(1) if ver else "2.1",
+    return (ver.group(1) if ver else "2.3",
             "iOS %s or later" % min_os.group(1) if min_os else "iOS")
 
 
@@ -387,12 +389,12 @@ def write_llms(app_version, min_os, lastmods):
 
 > BlindClock is a poker tournament blind timer (tournament clock) app for iPhone and iPad by Globetrotter Studio. Free download with an optional one-time Pro purchase — no account, no ads, no subscription. Requires %s. Current version: %s (site updated %s).
 
-Key features: blind structure generator, time bank, payout calculator, Live Activity and Dynamic Island, iPad landscape table display, live table stats (players remaining, average stack), iCloud sync. Available in 12 languages.
+Key features: blind structure generator, time bank, payout calculator, Live Activity and Dynamic Island, iPad landscape table display, live table stats (players remaining, average stack), iCloud sync, Big Screen Mode on a TV or projector with the device as remote (Pro), ICM chop and payout templates (Pro). Available in 12 languages.
 
 ## Pages
 
 - [Home](%s/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
-- [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
+- [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, big-screen TV mode, ICM chops, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
 - [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
 - [Privacy Policy](%s/privacy.html): no account, no ads, anonymous analytics only
 
