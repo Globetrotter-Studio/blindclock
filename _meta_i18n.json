@@ -2,7 +2,7 @@
   "_comment": "Per-page <title> and <meta description> for each language. Source for _build_pages.py (also feeds og:title/og:description/JSON-LD). Edit here, then run python3 _build_pages.py. English (en) is the canonical/fallback. SEO notes: titles pair the two category synonyms (blind timer + tournament clock / Pokeruhr / reloj / 時鐘…), descriptions front-load the category + free/no-ads/no-subscription within ~155 Latin or ~80 CJK chars.",
   "index": {
     "en":      { "title": "BlindClock — Poker Blind Timer & Tournament Clock for iPhone & iPad", "desc": "Free poker blind timer and tournament clock for iPhone and iPad. Blind structure generator, payout calculator, iPad table display. No ads, no subscription." },
-    "zh-Hant": { "title": "BlindClock — 德州撲克盲注計時器與錦標賽時鐘(iPhone/iPad)", "desc": "iPhone 與 iPad 的免費德州撲克錦標賽盲注計時器。盲注結構產生器、彩金計算、iPad 牌桌顯示。免帳號、無廣告、無訂閱。" },
+    "zh-Hant": { "title": "BlindClock — 德州撲克盲注計時器與錦標賽時鐘（iPhone/iPad）", "desc": "iPhone 與 iPad 的免費德州撲克錦標賽盲注計時器。盲注結構產生器、彩金計算、iPad 牌桌顯示。免帳號、無廣告、無訂閱。" },
     "ja":      { "title": "BlindClock — ポーカー ブラインドタイマー&トーナメントクロック(iPhone/iPad)", "desc": "iPhone・iPad 向けポーカートーナメント用ブラインドタイマー。ブラインド構成ジェネレーター、賞金計算、iPad テーブル表示。無料・登録不要・広告なし・サブスクなし。" },
     "ko":      { "title": "BlindClock — 포커 블라인드 타이머 & 토너먼트 클록 (iPhone·iPad)", "desc": "iPhone·iPad용 무료 포커 토너먼트 블라인드 타이머(홀덤 타이머). 블라인드 구조 생성기, 상금 계산기, iPad 테이블 디스플레이. 계정·광고·구독 없음." },
     "de":      { "title": "BlindClock — Pokeruhr & Blind-Timer für Pokerturniere (iPhone & iPad)", "desc": "Kostenlose Pokeruhr & Blind-Timer für iPhone und iPad. Blindstruktur-Generator, Auszahlungsrechner, iPad-Tischanzeige. Kein Konto, keine Werbung, kein Abo." },
@@ -30,7 +30,7 @@
   },
   "support": {
     "en":      { "title": "BlindClock Support — Poker Timer App Help & FAQ", "desc": "Help and FAQ for BlindClock, the poker tournament blind timer for iPhone and iPad — sounds, Pro purchase and restore, iCloud sync, Live Activity, and contact." },
-    "zh-Hant": { "title": "BlindClock 支援 — 撲克計時器 App 常見問題與協助", "desc": "BlindClock(iPhone/iPad 撲克錦標賽盲注計時器)的支援與常見問題:音效、Pro 購買與復原、iCloud 同步、即時動態與聯絡方式。" },
+    "zh-Hant": { "title": "BlindClock 支援 — 撲克計時器 App 常見問題與協助", "desc": "BlindClock（iPhone/iPad 撲克錦標賽盲注計時器）的支援與常見問題：音效、Pro 購買與復原、iCloud 同步、即時動態與聯絡方式。" },
     "ja":      { "title": "BlindClock サポート — ポーカータイマーアプリのヘルプ&FAQ", "desc": "BlindClock(iPhone・iPad 用ポーカー ブラインドタイマー)のサポートとよくある質問:サウンド、Pro の購入と復元、iCloud 同期、Live Activity、お問い合わせ。" },
     "ko":      { "title": "BlindClock 지원 — 포커 타이머 앱 도움말 & FAQ", "desc": "BlindClock(iPhone·iPad용 포커 블라인드 타이머)의 지원 및 FAQ: 사운드, Pro 구매와 복원, iCloud 동기화, 라이브 액티비티, 문의." },
     "de":      { "title": "BlindClock Support — Hilfe & FAQ zur Pokeruhr-App", "desc": "Hilfe und FAQ zu BlindClock, der Pokeruhr und dem Blind-Timer für iPhone und iPad — Sounds, Pro-Kauf und Wiederherstellung, iCloud-Sync, Live-Aktivität, Kontakt." },

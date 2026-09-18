@@ -1,6 +1,6 @@
 # BlindClock
 
-> BlindClock is a poker tournament blind timer (tournament clock) app for iPhone and iPad by Globetrotter Studio. Free download with an optional one-time Pro purchase — no account, no ads, no subscription. Requires iOS 18.6 or later. Current version: 2.3 (site updated 2026-08-12).
+> BlindClock is a poker tournament blind timer (tournament clock) app for iPhone and iPad by Globetrotter Studio. Free download with an optional one-time Pro purchase — no account, no ads, no subscription. Requires iOS 18.6 or later. Current version: 2.5 (site updated 2026-09-18).
 
 Key features: blind structure generator, time bank, payout calculator, Live Activity and Dynamic Island, iPad landscape table display, live table stats (players remaining, average stack), iCloud sync, Big Screen Mode on a TV or projector with the device as remote (Pro), ICM chop and payout templates (Pro). Available in 12 languages.
 

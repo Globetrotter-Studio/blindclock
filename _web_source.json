@@ -4,40 +4,40 @@
     "zh-Hant": "功能"
   },
   "i10": {
-    "en": "Built for home games and club tournaments — accurate when the screen is off, readable from across the table.",
-    "zh-Hant": "為家庭局與俱樂部錦標賽而生——螢幕關了照樣精準，整張牌桌都看得清楚。"
+    "en": "Made for home games and club tournaments. Accurate with the screen off, readable from across the table.",
+    "zh-Hant": "為家庭牌局與俱樂部錦標賽設計。螢幕關閉也準確，隔著牌桌也看得清。"
   },
   "i11": {
     "en": "Precise tournament timer",
     "zh-Hant": "精準錦標賽計時"
   },
   "i12": {
-    "en": "Pause, resume, or skip levels. The clock stays accurate in the background and survives a force-quit — pick up right where you left off.",
-    "zh-Hant": "暫停、續跑、跳級隨你操作。退到背景照樣準確，就算強制關閉 App 也能從中斷處接著跑。"
+    "en": "Pause, resume, or skip levels. The clock keeps time in the background and after a force quit, and picks up where it left off.",
+    "zh-Hant": "暫停、繼續或跳過級別。App 在背景或被強制關閉後計時照常，重開就從原處接續。"
   },
   "i13": {
     "en": "Blind structure generator",
     "zh-Hant": "盲注結構產生器"
   },
   "i14": {
-    "en": "Tell it your player count, chips, and target length — get a clean, casino-style structure with breaks in one tap.",
-    "zh-Hant": "輸入人數、籌碼與目標時長，一鍵產生含休息時段、數字漂亮的標準結構。"
+    "en": "Enter your player count, chips, and target length. You get a casino-style structure with breaks.",
+    "zh-Hant": "輸入人數、籌碼與預計時長，就得到含休息的賭場式結構。"
   },
   "i15": {
     "en": "Payout calculator",
     "zh-Hant": "獎池計算器"
   },
   "i16": {
-    "en": "Buy-ins, rebuys, and prize splits computed on the spot — settle up at the end of the night without a spreadsheet.",
-    "zh-Hant": "買入、重買、名次拆分當場算好，散場結帳不用再開試算表。"
+    "en": "Buy-ins, rebuys, and prize splits, calculated on the spot. No spreadsheet at the end of the night.",
+    "zh-Hant": "買入、重買與獎金分配當場算好，散場不用開試算表。"
   },
   "i17": {
     "en": "Time bank",
     "zh-Hant": "Time Bank"
   },
   "i18": {
-    "en": "Give players extra decision time with configurable time banks, complete with warnings and sounds.",
-    "zh-Hant": "可設定的 Time Bank 給玩家加時思考，倒數提示與音效一應俱全。"
+    "en": "Give players extra time to decide with a configurable time bank, with warnings and sounds.",
+    "zh-Hant": "可設定的 Time Bank 給玩家額外思考時間，有提醒與音效。"
   },
   "i19": {
     "en": "Live Activity &amp; Dynamic Island",
@@ -48,72 +48,72 @@
     "zh-Hant": "最新版本"
   },
   "i20": {
-    "en": "The current level lives on your Lock Screen and Dynamic Island. On a charging iPhone, StandBy turns it into a full-screen tournament clock.",
-    "zh-Hant": "目前級別常駐鎖定畫面與動態島；iPhone 橫放充電時，StandBy 直接變成全螢幕比賽時鐘。"
+    "en": "The current level shows on the Lock Screen and in the Dynamic Island. On a charging iPhone, StandBy shows a full-screen tournament clock.",
+    "zh-Hant": "目前級別顯示在鎖定畫面與動態島。iPhone 充電時，StandBy 會顯示全螢幕賽事時鐘。"
   },
   "i21": {
     "en": "iPad table display",
     "zh-Hant": "iPad 牌桌展示模式"
   },
   "i22": {
-    "en": "Rotate an iPad to landscape for a giant countdown with blinds on either side — the whole table reads it at a glance, and the screen stays awake.",
-    "zh-Hant": "iPad 轉成橫向就是巨大倒數搭配左右盲注資訊，全桌一眼看清，螢幕全程常亮。"
+    "en": "Turn an iPad to landscape for a large countdown with the blinds on either side. The whole table can read it, and the screen stays awake.",
+    "zh-Hant": "把 iPad 轉成橫向，就是大字倒數加兩側盲注。全桌都看得到，螢幕也不會休眠。"
   },
   "i23": {
     "en": "Template sharing",
     "zh-Hant": "範本分享"
   },
   "i24": {
-    "en": "Export any tournament as a .blindclock file and AirDrop it to a friend — they import your exact structure in one tap.",
-    "zh-Hant": "把賽事匯出成 .blindclock 檔，AirDrop 給牌友，一鍵就能匯入一模一樣的結構。"
+    "en": "Export any tournament as a .blindclock file and AirDrop it to a friend. They import the same structure with one tap.",
+    "zh-Hant": "把賽事匯出成 .blindclock 檔，用 AirDrop 傳給朋友，對方點一下就匯入同一份結構。"
   },
   "i25": {
     "en": "iCloud sync",
     "zh-Hant": "iCloud 同步"
   },
   "i26": {
-    "en": "Your tournament templates follow you across iPhone and iPad automatically — free for everyone.",
-    "zh-Hant": "賽事範本在 iPhone 與 iPad 之間自動同步——所有人免費使用。"
+    "en": "Your tournament templates sync between iPhone and iPad. Free for everyone.",
+    "zh-Hant": "賽事範本在 iPhone 與 iPad 之間同步，所有人免費。"
   },
   "i27": {
-    "en": "What’s new in 2.3",
-    "zh-Hant": "2.3 有什麼新功能"
+    "en": "What’s new in 2.5",
+    "zh-Hant": "2.5 有什麼新功能"
   },
   "i28a": {
-    "en": "Big Screen Mode (Pro)",
-    "zh-Hant": "大螢幕模式(Pro)"
+    "en": "Clock themes &amp; branding (Pro)",
+    "zh-Hant": "時鐘主題與品牌化（Pro）"
   },
   "i28b": {
-    "en": "plug your iPhone or iPad into a TV or projector — the big screen becomes a full-room tournament clock, and your device becomes the remote.",
-    "zh-Hant": "iPhone 或 iPad 接上電視或投影機——大螢幕變成全場錦標賽時鐘,手機變成遙控面板。"
+    "en": "seven themes, including Daylight, the first light theme, change the colors of the whole app. Add your room name and logo on the big screen, and preview every theme for free.",
+    "zh-Hant": "7 款主題（包括第一款亮色主題「日光」）會改變整個 App 的配色。大螢幕可以顯示你的房間名稱與標誌，每款主題都能免費預覽。"
   },
   "i3": {
     "en": "Support",
     "zh-Hant": "支援"
   },
   "i30a": {
-    "en": "Advanced payouts (Pro)",
-    "zh-Hant": "獎池計算進階(Pro)"
+    "en": "Settlement assistant (Pro)",
+    "zh-Hant": "結算助手（Pro）"
   },
   "i30b": {
-    "en": "chop the prize pool by ICM equity, set custom payout percentages, and save payout templates.",
-    "zh-Hant": "以 ICM 權益分配獎池、自訂名次百分比,並可儲存獎池範本。"
+    "en": "count each player’s stack by denomination, save your chip set, and BlindClock checks that the chips entered match the chips in play before anyone leaves.",
+    "zh-Hant": "逐面額清點每位玩家的籌碼，存下你的籌碼結構；散場前，BlindClock 會核對輸入的總碼和場上籌碼是否相符。"
   },
   "i31a": {
-    "en": "Polish everywhere",
-    "zh-Hant": "全面打磨"
+    "en": "Polish &amp; fixes",
+    "zh-Hant": "細節優化與修正"
   },
   "i31b": {
-    "en": "Live Activity now speaks all 12 languages, plus dozens of stability, performance, and accessibility improvements. By request: an 80/20 payout preset and one-tap “Apply Duration to All Levels” — thanks, Troy!",
-    "zh-Hant": "即時動態現已完整支援 12 種語言,另有大量穩定性、效能與無障礙改進。應使用者建議新增 80/20 獎金分配預設與「套用時長到所有級別」——感謝 Troy!"
+    "en": "the iPad number pad is readable again, the big-screen Time Bank is larger, the current level shows in the top bar, and a What’s New screen appears once after each update.",
+    "zh-Hant": "iPad 數字鍵盤恢復可讀，大螢幕的 Time Bank 放大，頂端顯示目前級別，每次更新後會出現一次「新功能」畫面。"
   },
   "i4": {
     "en": "Privacy",
     "zh-Hant": "隱私權"
   },
   "i41": {
-    "en": "The free version is fully playable — timer, Live Activity, generator, payouts, table stats, sync, and up to 5 custom tournaments. Pro removes the limit and unlocks Big Screen Mode and advanced payouts — one purchase, forever, on all your devices.",
-    "zh-Hant": "免費版功能完整可用——計時器、Live Activity、結構產生器、獎池計算、牌桌數據、同步,以及最多 5 個自訂賽事。Pro 一次買斷即解除上限,並解鎖大螢幕模式與獎池計算進階——永久有效,所有裝置通用。"
+    "en": "The free version includes the timer, Live Activity, generator, payouts, table stats, sync, and up to 5 custom tournaments. Pro removes the limit and adds Big Screen Mode, advanced payouts with the settlement assistant, and clock themes &amp; branding. One purchase, on all your devices.",
+    "zh-Hant": "免費版包含計時器、即時動態、產生器、獎池計算、牌桌數據、同步，以及最多 5 個自訂賽事。Pro 解除上限，並加入大螢幕模式、獎池計算進階與結算助手、時鐘主題與品牌化。買一次，所有裝置都能用。"
   },
   "i42": {
     "en": "Unlimited custom tournaments",
@@ -145,55 +145,55 @@
   },
   "i49": {
     "en": "BlindClock is an independent poker tournament blind timer and tournament clock app for iPhone & iPad.",
-    "zh-Hant": "BlindClock 是一款獨立開發的撲克錦標賽盲注計時器(錦標賽時鐘)App,適用於 iPhone 與 iPad。"
+    "zh-Hant": "BlindClock 是一款獨立開發的撲克錦標賽盲注計時器（錦標賽時鐘）App，適用於 iPhone 與 iPad。"
   },
   "i5": {
-    "en": "The tournament clock that runs your poker night.",
-    "zh-Hant": "替你管好整晚牌局的錦標賽時鐘。"
+    "en": "A blind timer for home poker tournaments.",
+    "zh-Hant": "家庭撲克錦標賽的盲注計時器。"
   },
   "i50": {
     "en": "See it in action",
     "zh-Hant": "看看實際畫面"
   },
   "i51": {
-    "en": "Live table stats — average stack, players left, and big blinds, right on the clock.",
-    "zh-Hant": "即時牌桌統計——平均籌碼、剩餘人數、大盲數,直接顯示在時鐘上。"
+    "en": "Live table stats: average stack, players left, and big blinds, on the clock screen.",
+    "zh-Hant": "即時牌桌數據：平均籌碼、剩餘人數、大盲數，直接顯示在時鐘畫面。"
   },
   "i52": {
     "en": "BlindClock poker tournament clock with live table stats: blinds, countdown, average stack and players left",
-    "zh-Hant": "BlindClock 撲克錦標賽時鐘,顯示盲注、倒數與即時牌桌統計:平均籌碼與剩餘人數"
+    "zh-Hant": "BlindClock 撲克錦標賽時鐘，顯示盲注、倒數與即時牌桌統計：平均籌碼與剩餘人數"
   },
   "i53": {
-    "en": "Tell the generator your players, chips, and length — it builds the structure.",
-    "zh-Hant": "告訴產生器人數、籌碼與時長,結構自動生成。"
+    "en": "Enter players, chips, and length. The generator builds the structure.",
+    "zh-Hant": "輸入人數、籌碼與時長，產生器就排出結構。"
   },
   "i54": {
     "en": "Blind structure generator with one-tap level durations and a casino-style blind schedule",
-    "zh-Hant": "盲注結構產生器,一鍵選擇級別長度,自動產生賭場風格盲注表"
+    "zh-Hant": "盲注結構產生器，一鍵選擇級別長度，自動產生賭場風格盲注表"
   },
   "i55": {
-    "en": "Buy-ins and rebuys become an instant prize pool and payouts.",
-    "zh-Hant": "買入與重買即時變成獎池與各名次獎金。"
+    "en": "Buy-ins and rebuys become a prize pool and payouts.",
+    "zh-Hant": "買入與重買直接變成獎池與各名次獎金。"
   },
   "i56": {
     "en": "Poker payout calculator showing prize pool and instant first, second and third place amounts",
-    "zh-Hant": "撲克獎池計算器,顯示總獎池與冠亞季軍即時金額"
+    "zh-Hant": "撲克獎池計算器，顯示總獎池與冠亞季軍即時金額"
   },
   "i57": {
     "en": "Sample blind structures",
     "zh-Hant": "範例盲注結構"
   },
   "i58": {
-    "en": "What a clean structure looks like: a turbo wraps up in about 1.5 hours, a standard home game in about 3, a deep-stack event in 4.5 or more. BlindClock’s generator builds one for your exact player count, chips, and target length in one tap.",
-    "zh-Hant": "一份漂亮的結構長這樣:快速賽約 1.5 小時打完,標準家庭賽約 3 小時,深籌碼賽事 4.5 小時以上。BlindClock 的產生器會照你的人數、籌碼與目標時長,一鍵生成專屬結構。"
+    "en": "What a clean structure looks like: a turbo runs about 1.5 hours, a standard home game about 3, a deep-stack event 4.5 or more. BlindClock’s generator builds one for your player count, chips, and target length.",
+    "zh-Hant": "一份好結構長這樣：快速賽約 1.5 小時，標準家庭局約 3 小時，深籌碼賽事 4.5 小時以上。BlindClock 的產生器會依你的人數、籌碼與目標時長排出一份。"
   },
   "i59": {
     "en": "Level",
     "zh-Hant": "級別"
   },
   "i6": {
-    "en": "Blind levels, breaks, time bank, payouts — set it up in seconds, prop up the iPad, and just play. No account, no ads, no subscription.",
-    "zh-Hant": "盲注級別、休息時段、Time Bank、獎池分配——幾秒鐘設定完成，把 iPad 立在桌上就能開打。不用帳號、沒有廣告、不搞訂閱。"
+    "en": "Blind levels, breaks, time bank, and payouts. Set it up in a minute, prop up the iPad, and play. No account, no ads, no subscription.",
+    "zh-Hant": "盲注級別、休息、Time Bank、獎池分配。一分鐘設定好，把 iPad 立起來就能開打。不用帳號、沒有廣告、沒有訂閱。"
   },
   "i60": {
     "en": "Turbo · 15 min",
@@ -212,24 +212,24 @@
     "zh-Hant": "起始籌碼"
   },
   "i64": {
-    "en": "Blinds are shown as small blind / big blind. Add a 10-minute break every four or five levels — BlindClock’s generator places them automatically.",
-    "zh-Hant": "盲注格式為小盲 / 大盲。每四到五級加一次 10 分鐘休息——BlindClock 的產生器會自動排好。"
+    "en": "Blinds are shown as small blind / big blind. Add a 10-minute break every four or five levels. BlindClock’s generator places them for you.",
+    "zh-Hant": "盲注以小盲 / 大盲表示。每四到五級加一次 10 分鐘休息，BlindClock 的產生器會自動安排。"
   },
   "i65": {
     "en": "Read the full guide: how to run a home poker tournament →",
-    "zh-Hant": "閱讀完整指南(英文):如何舉辦一場家庭撲克錦標賽 →"
+    "zh-Hant": "閱讀完整指南（英文）：如何舉辦一場家庭撲克錦標賽 →"
   },
   "i66": {
     "en": "Big Screen Mode",
     "zh-Hant": "大螢幕模式"
   },
   "i67": {
-    "en": "Plug into a TV or projector and the big screen becomes the tournament clock — your device becomes the remote. A BlindClock Pro feature.",
-    "zh-Hant": "接上電視或投影機,大螢幕變成錦標賽時鐘——手機變成遙控面板。BlindClock Pro 功能。"
+    "en": "Connect to a TV or projector and the big screen shows the tournament clock. Your device works as the remote. A BlindClock Pro feature.",
+    "zh-Hant": "接上電視或投影機，大螢幕顯示賽事時鐘，你的裝置當遙控器。BlindClock Pro 功能。"
   },
   "i68": {
     "en": "Big Screen Mode for TV &amp; projector",
-    "zh-Hant": "大螢幕模式(電視/投影機)"
+    "zh-Hant": "大螢幕模式（電視/投影機）"
   },
   "i7": {
     "en": "Download on the App Store",
@@ -240,8 +240,8 @@
     "zh-Hant": "ICM 分錢與獎池範本"
   },
   "i8": {
-    "en": "Version 2.3 · iOS 18.6+ · iPhone &amp; iPad",
-    "zh-Hant": "版本 2.3 · iOS 18.6+ · iPhone 與 iPad"
+    "en": "Version 2.5 · iOS 18.6+ · iPhone &amp; iPad",
+    "zh-Hant": "版本 2.5 · iOS 18.6+ · iPhone 與 iPad"
   },
   "i9": {
     "en": "Everything a host needs",
@@ -436,40 +436,40 @@
     "zh-Hant": "BlindClock Pro 包含什麼？是訂閱制嗎？"
   },
   "s11": {
-    "en": "Pro is a one-time purchase — not a subscription. The free version includes everything you need to run a game, plus up to 5 custom tournaments. Pro removes that limit and unlocks Big Screen Mode and advanced ICM payouts — on all devices signed in with your Apple Account.",
-    "zh-Hant": "Pro 是一次性買斷,不是訂閱。免費版已包含主持牌局所需的全部功能,並可建立最多 5 個自訂賽事;Pro 解除這個上限,並解鎖大螢幕模式與 ICM 獎池進階——在使用同一 Apple 帳號的所有裝置上通用。"
+    "en": "Pro is a one-time purchase, not a subscription. The free version includes everything you need to run a game, plus up to 5 custom tournaments. Pro removes that limit and adds Big Screen Mode, advanced ICM payouts with chip counting, and clock themes &amp; branding, on all devices signed in with your Apple Account.",
+    "zh-Hant": "Pro 是一次性買斷，不是訂閱。免費版已包含主持牌局需要的功能，並可建立最多 5 個自訂賽事。Pro 解除這個上限，並加入大螢幕模式、ICM 獎池進階與籌碼清點、時鐘主題與品牌化，同一 Apple 帳號的裝置都能用。"
   },
   "s12": {
     "en": "I bought Pro but it shows as locked. How do I restore my purchase?",
     "zh-Hant": "已購買 Pro 但顯示未解鎖，如何恢復購買？"
   },
   "s13": {
-    "en": "Open the upgrade screen (tap the Pro banner on the home screen) and tap “Restore Purchases”. Make sure the device is signed in with the same Apple Account you used to buy Pro.",
-    "zh-Hant": "打開升級頁面（點首頁的 Pro 橫幅），然後點「恢復購買」。請確認裝置登入的 Apple 帳號與當初購買 Pro 的帳號相同。"
+    "en": "Open the upgrade screen (tap the Pro banner on the home screen) and tap “Restore Purchases”. The device must be signed in with the same Apple Account you used to buy Pro.",
+    "zh-Hant": "打開升級畫面（點首頁的 Pro 橫幅），再點「恢復購買」。裝置必須登入購買 Pro 時使用的同一個 Apple 帳號。"
   },
   "s14": {
     "en": "How does iCloud sync work?",
     "zh-Hant": "iCloud 同步如何運作？"
   },
   "s15": {
-    "en": "Your custom tournaments sync automatically through your private iCloud account — no setup needed. Both devices must be signed in to the same Apple Account with iCloud Drive enabled. If you’re not signed in to iCloud, the app simply keeps everything on the device. The running clock itself doesn’t sync between devices — only your saved tournaments do.",
-    "zh-Hant": "自訂賽事會透過你的私人 iCloud 帳號自動同步，無需任何設定。兩台裝置必須登入同一個 Apple 帳號並啟用 iCloud 雲碟。如果未登入 iCloud，App 會將所有資料保留在裝置上。注意：同步的是已儲存的賽事範本，執行中的時鐘不會跨裝置同步。"
+    "en": "Your custom tournaments sync through your private iCloud account. No setup is needed. Both devices must be signed in to the same Apple Account with iCloud Drive turned on. If you are not signed in to iCloud, the app keeps everything on the device. The running clock does not sync between devices, only your saved tournaments.",
+    "zh-Hant": "自訂賽事會透過你的私人 iCloud 帳號同步，不需要設定。兩台裝置必須登入同一個 Apple 帳號並開啟 iCloud 雲碟。若沒有登入 iCloud，App 會把資料留在裝置上。進行中的時鐘不會跨裝置同步，只有已儲存的賽事會。"
   },
   "s16": {
     "en": "How do I share a tournament with a friend?",
     "zh-Hant": "如何把賽事分享給朋友？"
   },
   "s17": {
-    "en": "Swipe left on any tournament in your list and tap the share icon to export it as a .blindclock file — send it via AirDrop, Messages, or any app. When your friend opens the file, BlindClock shows a preview and imports it with one tap.",
-    "zh-Hant": "在賽事列表中向左滑動，點分享圖示即可匯出 .blindclock 檔，透過 AirDrop、訊息或任何 App 傳送。朋友打開檔案後，BlindClock 會顯示預覽，一鍵即可匯入。"
+    "en": "Swipe left on a tournament in your list and tap the share icon to export it as a .blindclock file. Send it by AirDrop, Messages, or any other app. When your friend opens the file, BlindClock shows a preview and imports it with one tap.",
+    "zh-Hant": "在列表中的賽事上向左滑，點分享圖示，就會匯出成 .blindclock 檔。可以用 AirDrop、訊息或其他 App 傳送。朋友打開檔案時，BlindClock 會顯示預覽，點一下就匯入。"
   },
   "s18": {
     "en": "The Live Activity doesn’t appear on my Lock Screen.",
     "zh-Hant": "鎖定畫面上沒有出現 Live Activity。"
   },
   "s19": {
-    "en": "Check Settings → BlindClock and make sure Live Activities are allowed. You can also toggle the lock-screen banner from the in-app settings while a tournament is running. On iPhone 14 Pro and later, the current level also appears in the Dynamic Island.",
-    "zh-Hant": "請到「設定 → BlindClock」確認已允許「即時動態」。比賽進行中也可以在 App 內設定切換鎖定畫面橫幅。iPhone 14 Pro 及之後的機型，目前級別也會顯示在動態島上。"
+    "en": "Check Settings → BlindClock and make sure Live Activities are allowed. You can also turn the lock-screen banner on or off from the in-app settings while a tournament is running. On iPhone 14 Pro and later, the current level also appears in the Dynamic Island.",
+    "zh-Hant": "檢查「設定」→「BlindClock」，確認已允許即時動態。賽事進行中也可以在 App 內設定開關鎖定畫面橫幅。iPhone 14 Pro 以後的機型，目前級別也會出現在動態島。"
   },
   "s2": {
     "en": "Privacy",
@@ -480,16 +480,16 @@
     "zh-Hant": "如何讓螢幕在牌局中保持常亮？"
   },
   "s21": {
-    "en": "Turn on “Keep Screen Awake” in the running tournament’s settings. On iPad in landscape, the table display keeps the screen awake automatically. Plug in the device for long sessions.",
-    "zh-Hant": "在進行中賽事的設定裡開啟「保持螢幕喚醒」。iPad 橫向的牌桌展示模式會自動常亮。長時間牌局建議接上電源。"
+    "en": "Turn on “Keep Screen Awake” in the running tournament’s settings. On iPad in landscape, the table display keeps the screen awake by itself. Plug in the device for long sessions.",
+    "zh-Hant": "在進行中賽事的設定裡開啟「螢幕常亮」。iPad 橫向的牌桌展示會自動保持螢幕常亮。長時間使用請接上電源。"
   },
   "s22": {
     "en": "I force-quit the app mid-tournament. Is my game gone?",
     "zh-Hant": "比賽中不小心強制關閉 App，進度會不見嗎？"
   },
   "s23": {
-    "en": "No — BlindClock saves a checkpoint while the clock runs. Reopen the app and it offers to resume the tournament exactly where it left off, with the elapsed time corrected.",
-    "zh-Hant": "不會——時鐘運行期間 BlindClock 會持續保存進度。重新打開 App 即可從中斷的地方繼續比賽，經過的時間也會自動校正。"
+    "en": "No. BlindClock saves a checkpoint while the clock runs. Reopen the app and it offers to resume the tournament where it left off, with the elapsed time corrected.",
+    "zh-Hant": "不會。時鐘運行時 BlindClock 會存檢查點。重開 App 會詢問是否從原處接續，已進行時間會自動校正。"
   },
   "s24": {
     "en": "Which devices are supported?",
@@ -513,7 +513,7 @@
   },
   "s29": {
     "en": "BlindClock is an independent poker tournament blind timer and tournament clock app for iPhone & iPad.",
-    "zh-Hant": "BlindClock 是一款獨立開發的撲克錦標賽盲注計時器(錦標賽時鐘)App,適用於 iPhone 與 iPad。"
+    "zh-Hant": "BlindClock 是一款獨立開發的撲克錦標賽盲注計時器（錦標賽時鐘）App，適用於 iPhone 與 iPad。"
   },
   "s3": {
     "en": "Support",
@@ -524,60 +524,60 @@
     "zh-Hant": "撲克盲注每級該設多長時間？"
   },
   "s31": {
-    "en": "Use 15–20 minute blind levels for a fast turbo game, 20–30 minutes for a standard home tournament, and 30–45 minutes or more for a deep-stack event. Shorter levels end the night sooner but force more all-ins; longer levels leave more room for real play. BlindClock’s generator picks a level length from your target duration automatically, and you can fine-tune every level afterwards.",
-    "zh-Hant": "快速的 Turbo 賽每級 15–20 分鐘，標準家庭賽 20–30 分鐘，深籌碼賽事則用 30–45 分鐘以上。級別越短散場越早，但玩家更常被迫全下；級別越長，越有空間打真正的技術牌。BlindClock 的產生器會依你的目標時長自動選好級別長度，之後仍可逐級微調。"
+    "en": "Use 15–20 minute blind levels for a fast turbo game, 20–30 minutes for a standard home tournament, and 30–45 minutes or more for a deep-stack event. Shorter levels end the night sooner but force more all-ins. Longer levels leave more room for play. BlindClock’s generator picks a level length from your target duration, and you can adjust every level afterwards.",
+    "zh-Hant": "快速賽每級 15 到 20 分鐘，標準家庭局 20 到 30 分鐘，深籌碼賽事 30 到 45 分鐘以上。級別越短越早結束，但會逼出更多全下；級別越長越有空間打牌。BlindClock 的產生器會依目標時長選擇級別長度，之後每一級都可以再調。"
   },
   "s32": {
     "en": "What payout structure should a home tournament use?",
     "zh-Hant": "家庭錦標賽的獎金該怎麼分配？"
   },
   "s33": {
-    "en": "For 10 players or fewer, pay the top three finishers 50/30/20 percent of the prize pool; for 11–20 players, pay four places — roughly 50/25/15/10. A good rule of thumb is that about one in five entrants should get paid. BlindClock’s payout calculator applies the split to your buy-ins and rebuys on the spot, so the exact amounts are ready before the final hand.",
-    "zh-Hant": "10 人以內取前三名，按獎池的 50/30/20 比例分配；11–20 人取前四名，約 50/25/15/10。經驗法則是大約每 5 位參賽者就有 1 人獲獎。BlindClock 的獎池計算器會把這個比例即時套用到買入與重買上，最後一手開打前，各名次的確切金額就已經算好。"
+    "en": "For 10 players or fewer, pay the top three 50/30/20 percent of the prize pool. For 11–20 players, pay four places, roughly 50/25/15/10. A common rule is that about one in five entrants gets paid. BlindClock’s payout calculator applies the split to your buy-ins and rebuys, so the amounts are ready before the final hand.",
+    "zh-Hant": "10 人以下付前三名，比例 50/30/20；11 到 20 人付四名，大約 50/25/15/10。常見做法是約每五人有一人領獎。BlindClock 的獎池計算會把比例套到買入與重買上，最後一手之前金額就算好了。"
   },
   "s34": {
     "en": "How many chips does each player need?",
     "zh-Hant": "每位玩家需要多少籌碼？"
   },
   "s35": {
-    "en": "Plan on about 50 chips per player, with the starting big blind at roughly 1% of the starting stack — for example, a 5,000 stack with 25/50 blinds gives everyone a comfortable 100 big blinds. Three or four denominations are plenty; color up the smallest chips once they’re no longer needed. BlindClock’s live table stats show the average stack in big blinds, so you always know where the game stands.",
-    "zh-Hant": "抓每人約 50 枚籌碼，起始大盲設為起始籌碼的 1% 左右——例如 5,000 起始籌碼配 25/50 盲注，每個人都有寬裕的 100 個大盲。三到四種面額就很夠用；最小面額用不到時就換成大額籌碼。BlindClock 的即時牌桌統計會顯示平均籌碼換算成幾個大盲，牌局走到哪裡一目了然。"
+    "en": "Plan on about 50 chips per player, with the starting big blind at about 1% of the starting stack. For example, a 5,000 stack with 25/50 blinds gives everyone 100 big blinds. Three or four denominations are enough. Color up the smallest chips once they are no longer needed. BlindClock’s live table stats show the average stack in big blinds, so you know where the game stands.",
+    "zh-Hant": "抓每人約 50 枚籌碼，起始大盲約為起始籌碼的 1%。例如 5,000 起始籌碼配 25/50 盲注，每人有 100 個大盲。三到四種面額就夠，最小面額用不到時換成大額籌碼。BlindClock 的即時牌桌數據會顯示以大盲計的平均籌碼，隨時知道牌局進行到哪。"
   },
   "s36": {
     "en": "How do I create a blind structure?",
     "zh-Hant": "盲注結構要怎麼設計？"
   },
   "s37": {
-    "en": "The easiest way is BlindClock’s built-in generator: enter your player count, chips, and target duration, and it builds a clean casino-style structure with breaks in one tap. A good structure raises blinds by roughly 25–50% per level and keeps the numbers round. You can edit every level, add breaks, and save the result as a template to reuse or share.",
-    "zh-Hant": "最快的方法是用 BlindClock 內建的盲注結構產生器：輸入人數、籌碼與目標時長，一鍵產生含休息時段、賭場風格的漂亮結構。好的結構大約每級把盲注調升 25–50%，並讓數字保持乾淨好唸。每一級都能再編輯、自由加入休息時段，也能把成果存成範本，重複使用或分享給牌友。"
+    "en": "The easiest way is BlindClock’s generator: enter your player count, chips, and target duration, and it builds a casino-style structure with breaks. A good structure raises the blinds by about 25–50% per level and keeps the numbers round. You can edit every level, add breaks, and save the result as a template to reuse or share.",
+    "zh-Hant": "最簡單的方法是用 BlindClock 的產生器：輸入人數、籌碼與目標時長，就會排出含休息的賭場式結構。好的結構每級盲注約增加 25 到 50%，數字保持整數。每一級都可以修改、加休息，並存成範本重複使用或分享。"
   },
   "s38": {
     "en": "How do I show the clock on a TV or projector?",
-    "zh-Hant": "如何把時鐘顯示在電視或投影機上?"
+    "zh-Hant": "如何把時鐘顯示在電視或投影機上？"
   },
   "s39": {
-    "en": "Connect your iPhone or iPad to the screen with AirPlay or a cable (an HDMI adapter works great). With BlindClock Pro, the big screen turns into a dedicated tournament clock — giant countdown and blinds — while your device becomes the remote for pausing, skipping levels, and busting players. Disconnecting never resets the tournament.",
-    "zh-Hant": "用 AirPlay 或轉接線(HDMI 轉接器即可)把 iPhone 或 iPad 接上大螢幕。搭配 BlindClock Pro,大螢幕會變成專屬的錦標賽時鐘——巨型倒數與盲注——手機則變成遙控面板,可暫停、跳級與淘汰玩家。中途斷線不會重置比賽。"
+    "en": "Connect your iPhone or iPad to the screen with AirPlay or a cable (an HDMI adapter works). With BlindClock Pro, the big screen shows a dedicated tournament clock with a large countdown and the blinds, and your device becomes the remote for pausing, skipping levels, and busting players. Disconnecting does not reset the tournament.",
+    "zh-Hant": "用 AirPlay 或轉接線（HDMI 轉接器即可）把 iPhone 或 iPad 接上螢幕。搭配 BlindClock Pro，大螢幕會顯示專用的賽事時鐘，有大字倒數與盲注；你的裝置變成遙控器，可以暫停、跳級、淘汰玩家。中斷連線不會重置比賽。"
   },
   "s4": {
-    "en": "BlindClock 2.3 · We usually reply within a few days.",
-    "zh-Hant": "BlindClock 2.3 · 我們通常會在幾天內回覆。"
+    "en": "BlindClock 2.5 · We usually reply within a few days.",
+    "zh-Hant": "BlindClock 2.5 · 我們通常會在幾天內回覆。"
   },
   "s42": {
     "en": "What is an ICM chop and how does BlindClock calculate it?",
-    "zh-Hant": "什麼是 ICM 分錢?BlindClock 怎麼計算?"
+    "zh-Hant": "什麼是 ICM 分錢？BlindClock 怎麼計算？"
   },
   "s43": {
-    "en": "When the last players agree to split the remaining prize pool, an ICM (Independent Chip Model) chop divides it fairly based on each player’s chip stack. Enter the stacks and BlindClock Pro computes a settlement that adds up to the pool exactly. You can also set custom payout percentages and save payout templates.",
-    "zh-Hant": "當最後幾位玩家同意分掉剩餘獎池時,ICM(獨立籌碼模型)會依每人籌碼量公平分配。輸入各家籌碼,BlindClock Pro 會算出總和恰好等於獎池的分配結果;也可以自訂名次百分比,並儲存獎池範本。"
+    "en": "When the last players agree to split the remaining prize pool, an ICM (Independent Chip Model) chop divides it by each player’s chip stack. Enter the stacks and BlindClock Pro calculates a settlement that adds up to the pool exactly. You can also set your own payout percentages and save payout templates.",
+    "zh-Hant": "當最後幾位玩家同意分掉剩餘獎池，ICM（獨立籌碼模型）分池會依每人籌碼量分配。輸入各家籌碼，BlindClock Pro 會算出總和恰好等於獎池的結算金額。也可以自訂名次百分比，並儲存獎池範本。"
   },
   "s5": {
     "en": "Need a hand?",
     "zh-Hant": "需要幫忙嗎？"
   },
   "s6": {
-    "en": "Questions, bug reports, and feature requests are all welcome. Please include your app version and device model so we can help faster.",
-    "zh-Hant": "使用問題、錯誤回報、功能建議都歡迎來信。請附上 App 版本與裝置型號，我們能更快幫上忙。"
+    "en": "Questions, bug reports, and feature requests are welcome. Include your app version and device model so we can help faster.",
+    "zh-Hant": "歡迎提問、回報問題或提出功能建議。請附上 App 版本與裝置型號，我們能更快處理。"
   },
   "s7": {
     "en": "Frequently asked questions",
@@ -588,7 +588,47 @@
     "zh-Hant": "聽不到級別切換的提示音。"
   },
   "s9": {
-    "en": "BlindClock’s chimes play even when the iPhone silent switch is on — but they use the media volume. Turn the volume up with the side buttons while the app is open, and check that sounds are enabled in the tournament’s settings. While the app is in the background, alerts are delivered as notifications, so allow notifications when the app asks.",
-    "zh-Hant": "BlindClock 的提示音即使在 iPhone 靜音模式下也會播放，但音量取決於媒體音量。請在 App 開啟時用側邊按鈕調高音量，並確認賽事設定中已開啟音效。App 退到背景時，提示改由通知送達，因此請允許 App 的通知權限。"
+    "en": "BlindClock’s sounds play even when the iPhone silent switch is on, but they use the media volume. Turn the volume up with the side buttons while the app is open, and check that sounds are enabled in the tournament’s settings. When the app is in the background, alerts arrive as notifications, so allow notifications when the app asks.",
+    "zh-Hant": "BlindClock 的提示音在 iPhone 靜音開關開啟時也會播放，但走媒體音量。App 開著時用側邊按鈕把音量調高，並確認賽事設定中已開啟音效。App 在背景時，提示改由通知送達，所以 App 詢問時請允許通知。"
+  },
+  "i69": {
+    "en": "Clock themes &amp; table branding",
+    "zh-Hant": "時鐘主題與牌桌品牌化"
+  },
+  "i71": {
+    "en": "Clock themes &amp; branding",
+    "zh-Hant": "時鐘主題與品牌化"
+  },
+  "i72": {
+    "en": "Seven themes, from Midnight to Daylight, change the colors of the whole app. Your room name and logo show on the big screen. Preview for free, apply with Pro.",
+    "zh-Hant": "從「午夜」到「日光」共 7 款主題，會改變整個 App 的配色。大螢幕顯示你的房間名稱與標誌。免費預覽，Pro 套用。"
+  },
+  "i73": {
+    "en": "Chip counting &amp; settlement check",
+    "zh-Hant": "籌碼清點與結算核對"
+  },
+  "i74": {
+    "en": "Count stacks by denomination, save your chip set, and check that the chips add up before anyone leaves. A BlindClock Pro feature.",
+    "zh-Hant": "逐面額點碼、儲存籌碼結構，散場前確認籌碼總數對得上。BlindClock Pro 功能。"
+  },
+  "i75": {
+    "en": "Chip counting &amp; settlement check",
+    "zh-Hant": "籌碼清點與結算核對"
+  },
+  "s44": {
+    "en": "Can I change how the clock looks or add my room’s branding?",
+    "zh-Hant": "可以更換時鐘外觀，或加上自己牌局的品牌嗎？"
+  },
+  "s45": {
+    "en": "Yes. BlindClock Pro includes seven clock themes, from dark ones like Midnight and Casino Felt to Daylight, a light theme. A theme changes the colors of the whole app. You can also set a room name and logo that appear on the big screen. Every theme can be previewed for free from the appearance settings. Applying one requires Pro.",
+    "zh-Hant": "可以。BlindClock Pro 內建 7 款時鐘主題，從「午夜」、「賭場綠呢」等暗色主題到亮色的「日光」。換主題會改變整個 App 的配色。你也可以設定房間名稱與標誌，顯示在大螢幕上。每款主題都能在外觀設定裡免費預覽，套用需要 Pro。"
+  },
+  "s46": {
+    "en": "How does chip counting and the settlement check work?",
+    "zh-Hant": "籌碼清點與結算核對怎麼用？"
+  },
+  "s47": {
+    "en": "On the ICM deal screen, tap the chip icon next to a player to count their stack by denomination. BlindClock totals it and fills in their chip count. Save your chip structure (up to 8 denominations) once and reuse it every game. If the tournament has a starting stack set, BlindClock also compares the chips entered with the chips in play and shows any difference before you split the pool.",
+    "zh-Hant": "在 ICM 分池畫面，點玩家旁邊的籌碼圖示，就能逐面額清點籌碼。BlindClock 會自動加總並填入該玩家的籌碼數。籌碼結構（最多 8 種面額）存一次，之後每場都能用。若賽事有設定起始籌碼，BlindClock 還會比對輸入的總碼和場上籌碼，分池前顯示差額。"
   }
 }

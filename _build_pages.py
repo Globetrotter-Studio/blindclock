@@ -85,6 +85,8 @@ FEATURE_LIST = [
     "iCloud sync",
     "Big Screen Mode on TV or projector (Pro)",
     "ICM chop and payout templates (Pro)",
+    "Clock themes and table branding (Pro)",
+    "Chip counting and settlement check (Pro)",
 ]
 
 # homepage screenshots: assets/screens/<code>/<name>.webp exists per language
