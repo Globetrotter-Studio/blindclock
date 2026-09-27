@@ -691,5 +691,15 @@
   <url>
     <loc>https://blindclock.app/best-poker-timer-apps.html</loc>
     <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blindclock.app/best-poker-timer-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/best-poker-timer-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://blindclock.app/best-poker-timer-apps.html"/>
+  </url>
+  <url>
+    <loc>https://blindclock.app/zh/best-poker-timer-apps.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blindclock.app/best-poker-timer-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/best-poker-timer-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://blindclock.app/best-poker-timer-apps.html"/>
   </url>
 </urlset>

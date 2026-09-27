@@ -53,6 +53,15 @@ PAGEKEY = {"index.html": "index", "privacy.html": "privacy", "support.html": "su
 # 12-language loop). They still get a sitemap entry (no alternates) + llms.txt.
 EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html", "best-poker-timer-apps.html"]
 
+# Hand-written translations of an extra English page (also not template-built;
+# each carries its own head with en + its language + x-default). The sitemap
+# lists the original and its copies with hreflang alternates, and built pages
+# in that language link to the copy instead of the English original (e.g. the
+# support FAQ's s48 link).
+EXTRA_TRANSLATIONS = {
+    "best-poker-timer-apps.html": {"zh-Hant": "zh/best-poker-timer-apps.html"},
+}
+
 # code (matches BC_STRINGS / _meta_i18n.json), URL slug, BCP-47 hreflang,
 # dropdown label, Open Graph locale. en uses slug "" (root).
 # Keep in sync with assets/lang.js.
@@ -359,9 +368,20 @@ def write_sitemap(lastmods, extra_lastmods):
         for _c, slug, _hl, _l, _og in LANGS:
             urls.append("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>"
                         % (page_url(page, slug), lastmods[page], alt))
-    for page in EXTRA_EN_PAGES:   # English-only: no hreflang alternates
-        urls.append("  <url>\n    <loc>%s/%s</loc>\n    <lastmod>%s</lastmod>\n  </url>"
-                    % (SITE, page, extra_lastmods[page]))
+    hreflang_of = {c: hl for c, _s, hl, _l, _og in LANGS}
+    for page in EXTRA_EN_PAGES:
+        copies = EXTRA_TRANSLATIONS.get(page, {})
+        if not copies:   # English-only: no hreflang alternates
+            urls.append("  <url>\n    <loc>%s/%s</loc>\n    <lastmod>%s</lastmod>\n  </url>"
+                        % (SITE, page, extra_lastmods[page]))
+            continue
+        pairs = ([("en", "%s/%s" % (SITE, page))]
+                 + [(hreflang_of[c], "%s/%s" % (SITE, p)) for c, p in copies.items()]
+                 + [("x-default", "%s/%s" % (SITE, page))])
+        alt = "".join('\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % pair for pair in pairs)
+        for path in [page] + list(copies.values()):
+            urls.append("  <url>\n    <loc>%s/%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>"
+                        % (SITE, path, extra_lastmods[path], alt))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
@@ -398,7 +418,8 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 - [Home](%s/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
 - [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, big-screen TV mode, ICM chops, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
 - [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
-- [Best poker timer apps for iPhone and iPad](%s/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer (English only)
+- [Best poker timer apps for iPhone and iPad](%s/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer
+- [iPhone 與 iPad 德州撲克盲注計時器 App 比較](%s/zh/best-poker-timer-apps.html): Traditional Chinese version of the comparison, with Taiwan App Store prices (NT$), which apps have a Traditional Chinese interface, and which are not sold in Taiwan
 - [Privacy Policy](%s/privacy.html): no account, no ads, anonymous analytics only
 
 ## App Store
@@ -408,7 +429,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 ## Languages
 
 English lives at the site root; the same three pages exist under each slug: %s.
-""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, SITE, SITE, APPSTORE_URL, langs_line)
+""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, SITE, SITE, SITE, APPSTORE_URL, langs_line)
     open(os.path.join(WEB, "llms.txt"), "w", encoding="utf-8").write(txt)
 
 
@@ -452,15 +473,19 @@ def main():
             html = inject_head(html, head_block(page, slug, hreflang, og_locale, m, jld))
             if slug:
                 html = rewrite_assets(html)
+            for original, copies in EXTRA_TRANSLATIONS.items():
+                if code in copies:
+                    html = html.replace('href="/%s"' % original, 'href="/%s"' % copies[code])
             open(os.path.join(outdir, page), "w", encoding="utf-8").write(html)
             written.append(os.path.relpath(os.path.join(outdir, page), WEB))
 
-    extra_lastmods = {p: git_date([p, "_build_pages.py"]) for p in EXTRA_EN_PAGES}
+    extra_paths = EXTRA_EN_PAGES + [p for copies in EXTRA_TRANSLATIONS.values() for p in copies.values()]
+    extra_lastmods = {p: git_date([p, "_build_pages.py"]) for p in extra_paths}
     write_sitemap(lastmods, extra_lastmods)
     write_robots()
     write_llms(app_version, min_os, lastmods)
     print("=== WROTE %d pages + sitemap.xml + robots.txt + llms.txt ===" % len(written))
-    print("  extra en-only pages in sitemap: " + ", ".join(EXTRA_EN_PAGES))
+    print("  extra pages in sitemap: " + ", ".join(extra_paths))
     print("  app %s · %s · lastmod %s" % (app_version, min_os, ", ".join("%s=%s" % (PAGEKEY[p], d) for p, d in lastmods.items())))
     print("  langs: " + ", ".join("%s→/%s" % (c, s or "(root)") for c, s, _h, _l, _og in LANGS))
     return 0
