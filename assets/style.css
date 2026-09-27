@@ -52,10 +52,12 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
+/* Nav rows wrap rather than push the page wider than the screen. */
 .nav-inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  gap: 6px 18px;
   padding: 12px 24px;
   max-width: 980px;
   margin: 0 auto;
@@ -80,8 +82,10 @@ body {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  gap: 18px;
+  gap: 6px 18px;
   margin-left: auto;
 }
 
@@ -393,13 +397,16 @@ table.structures tr.meta-row td {
 }
 
 /* ---- Content pages (privacy / support) ---- */
+/* Top/bottom only, so .container keeps its side padding. */
 .page {
-  padding: 56px 0 30px;
+  padding-top: 56px;
+  padding-bottom: 30px;
 }
 
 .page h1 {
   font-size: clamp(30px, 5vw, 40px);
   margin: 0 0 6px;
+  overflow-wrap: break-word;
 }
 
 .page .meta {
@@ -507,7 +514,7 @@ details.faq .answer a { color: var(--gold-bright); }
 footer {
   border-top: 1px solid var(--line);
   margin-top: 40px;
-  padding: 30px 0 44px;
+  padding: 30px 24px 44px;
   text-align: center;
   color: var(--muted);
   font-size: 13.5px;
@@ -515,8 +522,9 @@ footer {
 
 footer .foot-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 4px 20px;
   margin-bottom: 12px;
 }
 
@@ -534,8 +542,21 @@ footer a {
 
 footer a:hover { color: var(--gold-bright); }
 
-@media (max-width: 560px) {
-  .nav-links { gap: 12px; }
+/* With the in-page links (Features / What's New) the nav needs about 760px in French. */
+@media (max-width: 767px) {
   .nav-links a.nav-extra { display: none; }
+}
+
+@media (max-width: 560px) {
+  .nav-links { column-gap: 12px; }
   .hero { padding-top: 52px; }
+
+  /* With the language picker: logo + picker on the first row, links on the second. */
+  .nav-inner:has(.lang-select) .nav-links {
+    order: 1;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+  .lang-select { margin-left: auto; }
 }
