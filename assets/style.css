@@ -478,6 +478,10 @@ table.compare td:nth-child(2) { min-width: 180px; }
 table.compare td:nth-child(4),
 table.compare td:nth-child(6) { min-width: 150px; }
 
+/* Fewer, text-heavy columns (TV guide): narrower overall, even columns. */
+table.compare.compact { min-width: 640px; }
+table.compare.compact td { min-width: 150px; }
+
 table.compare tbody th[scope="row"],
 table.compare thead th:first-child {
   position: sticky;
