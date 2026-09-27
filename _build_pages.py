@@ -51,7 +51,7 @@ PAGEKEY = {"index.html": "index", "privacy.html": "privacy", "support.html": "su
 # English-only pages at the root — a deliberate hreflang exception (they carry
 # their own static head with en + x-default only, and are NOT run through the
 # 12-language loop). They still get a sitemap entry (no alternates) + llms.txt.
-EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html"]
+EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html", "best-poker-timer-apps.html"]
 
 # code (matches BC_STRINGS / _meta_i18n.json), URL slug, BCP-47 hreflang,
 # dropdown label, Open Graph locale. en uses slug "" (root).
@@ -398,6 +398,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 - [Home](%s/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
 - [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, big-screen TV mode, ICM chops, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
 - [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
+- [Best poker timer apps for iPhone and iPad](%s/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer (English only)
 - [Privacy Policy](%s/privacy.html): no account, no ads, anonymous analytics only
 
 ## App Store
@@ -407,7 +408,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 ## Languages
 
 English lives at the site root; the same three pages exist under each slug: %s.
-""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, SITE, APPSTORE_URL, langs_line)
+""" % (min_os, app_version, lastmods["index.html"], SITE, SITE, SITE, SITE, SITE, APPSTORE_URL, langs_line)
     open(os.path.join(WEB, "llms.txt"), "w", encoding="utf-8").write(txt)
 
 

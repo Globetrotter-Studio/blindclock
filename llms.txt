@@ -9,6 +9,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 - [Home](https://blindclock.app/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
 - [Support & FAQ](https://blindclock.app/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, big-screen TV mode, ICM chops, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
 - [How to run a home poker tournament](https://blindclock.app/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
+- [Best poker timer apps for iPhone and iPad](https://blindclock.app/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer (English only)
 - [Privacy Policy](https://blindclock.app/privacy.html): no account, no ads, anonymous analytics only
 
 ## App Store

@@ -429,6 +429,72 @@ table.structures tr.meta-row td {
 
 .prose a { color: var(--gold-bright); }
 
+.prose h3 {
+  font-size: 19px;
+  margin: 30px 0 6px;
+  color: var(--ink);
+}
+
+/* Maker · platforms · price line under each app heading (comparison page).
+   Scoped under .prose so it outranks `.prose p` / `.prose a`. */
+.prose .app-facts {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0 0 10px;
+}
+
+.prose .app-facts a { color: var(--muted); }
+
+/* ---- Comparison table (best-poker-timer-apps.html) ----
+   Scrolls sideways inside .table-wrap on phones; the app column stays put. */
+.table-wrap.wide {
+  max-width: none;
+  margin: 22px 0 0;
+}
+
+table.compare {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+table.compare th,
+table.compare td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+table.compare thead th {
+  border-top: none;
+  color: var(--gold-bright);
+  font-size: 13px;
+}
+
+table.compare td:nth-child(2) { min-width: 180px; }
+table.compare td:nth-child(4),
+table.compare td:nth-child(6) { min-width: 150px; }
+
+table.compare tbody th[scope="row"],
+table.compare thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--panel);
+  white-space: nowrap;
+  box-shadow: inset -1px 0 0 var(--line);
+}
+
+table.compare tbody th[scope="row"] a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+table.compare .no { color: var(--muted); }
+
 .callout {
   background: linear-gradient(160deg, var(--panel-2), var(--panel));
   border: 1px solid var(--line);
