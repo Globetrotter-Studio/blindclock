@@ -58,7 +58,13 @@ When a new version (e.g. 1.11) ships, update:
 3. **`privacy.html`** — only if data practices changed (new SDK, new data collected, new permission).
    If changed, also bump the “Effective date” (`pv2`) in every language.
 4. **Translations:** after editing any English string, update its translation for all 11 other languages (edit `_web_source.json` + `python3 _build_i18n.py`, or edit `assets/i18n.js` directly).
-5. Fill in the real App Store URL in `index.html` (`store-badge` link) once the app page is live.
+5. **App Store links:** the visible download buttons (`store-badge` in `index.html`, the CTA at the end of
+   `how-to-run-a-home-poker-tournament.html`) use the App Store Connect campaign link
+   `https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&ct=web&mt=8` (written with `&amp;`
+   in the HTML), so downloads from the site show up in Analytics → Acquisition → Campaigns → `web`.
+   Use the same link on any new button, and don't split `ct` per language or page — a campaign only
+   appears once it has 5+ downloads. `APPSTORE_URL` in `_build_pages.py` (JSON-LD `installUrl`/`sameAs`,
+   `llms.txt`) stays the clean URL on purpose.
 6. **Rebuild:** `python3 _build_pages.py` — regenerates all 36 pages + `sitemap.xml` +
    `robots.txt` + `llms.txt`, with JSON-LD/OG refreshed and the app version parsed from
    the hero pill (`i8`). (If titles/descriptions changed, edit `_meta_i18n.json` first —
