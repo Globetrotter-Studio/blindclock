@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>ICM Chop Explained: How to Split a Poker Prize Pool | BlindClock</title>
+  <meta name="description" content="How an ICM chop works when players make a deal, with a worked example comparing an even split, a chip chop, and ICM, and the math step by step.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css?v=2.5">
+  <!-- ICM explainer, English original. hreflang: en + zh-Hant (hand-translated copy at
+       /zh/icm-chop.html) + x-default. Not part of the 12-language build loop,
+       see _build_pages.py EXTRA_EN_PAGES and EXTRA_TRANSLATIONS.
+       Example numbers computed with an exact Malmuth-Harville implementation (fractions);
+       BlindClock details match Domain/UseCases/CalculateICMUseCase.swift as of 2.5
+       (max 9 players; round down, remainder to the largest stack). -->
+  <link rel="canonical" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/icm-chop.html">
+  <meta property="og:title" content="ICM Chop Explained: How to Split a Poker Prize Pool">
+  <meta property="og:description" content="How an ICM chop works when players make a deal, with a worked example comparing an even split, a chip chop, and ICM, and the math step by step.">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BlindClock app icon and name, poker tournament blind timer for iPhone and iPad">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICM Chop Explained: How to Split a Poker Prize Pool">
+  <meta name="twitter:description" content="How an ICM chop works when players make a deal, with a worked example comparing an even split, a chip chop, and ICM, and the math step by step.">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/icm-chop.html","headline":"ICM chop explained: how to split a poker tournament prize pool","description":"How an ICM chop works when players make a deal, with a worked example comparing an even split, a chip chop, and ICM, and the math step by step.","image":"https://blindclock.app/assets/og.png","inLanguage":"en","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>ICM chop explained: how to split a poker tournament prize pool</h1>
+  <p class="meta">Updated September 2026 · Worked examples for home games and small clubs · <a href="zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></p>
+
+  <div class="prose">
+
+    <p>An ICM chop is a deal where the players left in a tournament stop playing and split the remaining prize money using the Independent Chip Model (ICM). ICM turns each player’s chip count into a chance of finishing in each paid place, and pays each player the average of what those chances are worth. Compared with a split by chip count, it gives a little more to the short stacks and a little less to the chip leader, because in a tournament each extra chip is worth less the more chips you already have.</p>
+
+    <h2 id="when">When players make a deal</h2>
+    <ul>
+      <li>Late in a tournament the blinds are large compared with the stacks and most hands are all-ins. The players left often agree to stop and split the money, especially when it is late.</li>
+      <li>A deal needs every remaining player to agree. If one player says no, you keep playing.</li>
+      <li>Before you count, decide whether you are splitting all of the money or leaving some to play for, for example $50 and a trophy for the winner. Write the numbers down.</li>
+      <li>In a casino or club, tell the tournament director before you agree. House rules may apply.</li>
+    </ul>
+
+    <h2 id="three-ways">Three ways to split the money</h2>
+    <ul>
+      <li><b>Even split.</b> Everyone gets the same amount. Simple, but it ignores the chip counts, so it only feels fair when the stacks are close.</li>
+      <li><b>Chip chop.</b> Everyone first takes the lowest prize still unpaid, then the rest is shared out by each player’s share of the chips. Easy to do by hand.</li>
+      <li><b>ICM chop.</b> Everyone gets the ICM value of their stack. It needs a calculator once more than two players are left.</li>
+    </ul>
+
+    <h2 id="example">Worked example: three players left</h2>
+    <p>Twelve players each paid $50, so the prize pool is $600, paying $300, $180, and $120. Three players are left with all 60,000 chips in play:</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Chips</th>
+            <th scope="col">Share of chips</th>
+            <th scope="col">Even split</th>
+            <th scope="col">Chip chop</th>
+            <th scope="col">ICM chop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30,000</td><td>50.0%</td><td>$200</td><td>$240</td><td>$231</td></tr>
+          <tr><th scope="row">B</th><td>20,000</td><td>33.3%</td><td>$200</td><td>$200</td><td>$204</td></tr>
+          <tr><th scope="row">C</th><td>10,000</td><td>16.7%</td><td>$200</td><td>$160</td><td>$165</td></tr>
+          <tr><th scope="row">Total</th><td>60,000</td><td>100%</td><td>$600</td><td>$600</td><td>$600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Chip chop: each player takes the $120 third prize, then the other $240 is split by share of chips.</p>
+    <p>Why not split all $600 by share of chips? Player C would get $100, less than the $120 they are already sure of for third place. That is why a chip chop pays everyone the lowest prize first. ICM goes one step further and moves another $9 from the chip leader to the two shorter stacks.</p>
+
+    <h2 id="how-icm-works">How the ICM numbers are calculated</h2>
+    <p>ICM works out each player’s chance of finishing first, second, and third from the chip counts, then multiplies each chance by the prize for that place. Here is player A:</p>
+    <ol>
+      <li><b>Chance of finishing first</b> is the share of chips: 30,000 ÷ 60,000 = 50%.</li>
+      <li><b>Chance of finishing second</b> adds up every way another player could win first. If B wins (a 1 in 3 chance), A has 30,000 of the 40,000 chips left, so 75%. If C wins (1 in 6), A has 30,000 of the 50,000 left, so 60%. That gives 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35%.</li>
+      <li><b>Chance of finishing third</b> is what is left: 100% − 50% − 35% = 15%.</li>
+      <li><b>ICM value</b> is each chance times its prize, added up: 50% × $300 + 35% × $180 + 15% × $120 = $150 + $63 + $18 = $231.</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Finish 1st</th>
+            <th scope="col">Finish 2nd</th>
+            <th scope="col">Finish 3rd</th>
+            <th scope="col">ICM value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50.0%</td><td>35.0%</td><td>15.0%</td><td>$231</td></tr>
+          <tr><th scope="row">B</th><td>33.3%</td><td>40.0%</td><td>26.7%</td><td>$204</td></tr>
+          <tr><th scope="row">C</th><td>16.7%</td><td>25.0%</td><td>58.3%</td><td>$165</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This is the Malmuth-Harville model, the version of ICM that most calculators use. With more players the number of possible finishing orders grows fast (four players already have 24), so use a calculator.</p>
+
+    <h2 id="heads-up">Heads-up: ICM and a chip chop agree</h2>
+    <p>With two players left, ICM and a chip chop give the same answer. Say the prizes are $300 and $180 and the stacks are 40,000 and 20,000. Each player takes $180, and the other $120 is split two to one, so the chip leader gets $260 and the other player $220.</p>
+
+    <h2 id="limits">What ICM leaves out</h2>
+    <ul>
+      <li><b>Skill.</b> A stronger player may reasonably ask for more than ICM gives them.</li>
+      <li><b>Blinds and position.</b> ICM only looks at chip counts, not who is about to pay the big blind or how big the blinds are.</li>
+      <li><b>What people agree to.</b> Players often round the numbers or keep some money to play for. Treat ICM as the starting point for the conversation, not a rule.</li>
+    </ul>
+
+    <h2 id="in-blindclock">How to do it in BlindClock</h2>
+    <p>ICM chops are part of <a href="support.html#faq-icm-chop">BlindClock Pro</a>. Open the payout calculator from the clock screen, set <b>Split Method</b> to <b>Chop</b>, and enter each player’s chip count. You can also count a stack by denomination with the chip icon next to a player. BlindClock works out each player’s share for up to 9 players, rounds down to whole amounts and gives the leftover to the biggest stack, so the payouts add up to the prize pool exactly. If the tournament has a starting stack set, it also checks that the chips you entered match the chips in play before you split the money.</p>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <h3>Is an ICM chop fair?</h3>
+    <p>It is the most widely used way to turn chip counts into money, and it protects short stacks better than a simple split by chips. It doesn’t account for skill or the blinds, so players are free to adjust it before they agree.</p>
+
+    <h3>What is the difference between an ICM chop and a chip chop?</h3>
+    <p>A chip chop pays everyone the lowest remaining prize, then splits the rest by share of chips. An ICM chop uses each player’s chances of finishing in each place, which moves a little money from the chip leader to the shorter stacks. With two players left they give the same result.</p>
+
+    <h3>Does ICM work with more than three players?</h3>
+    <p>Yes. The method is the same, but the math grows quickly, so use a calculator. BlindClock handles up to 9 players, a full final table.</p>
+
+    <h3>Do all players have to agree to a chop?</h3>
+    <p>Yes. A deal needs every remaining player to agree. In a casino or club, tell the tournament director as well, since house rules on deals vary.</p>
+
+    <h3>How should a home tournament pay out before any deal?</h3>
+    <p>For 10 players or fewer, pay the top three 50/30/20 percent of the prize pool. For 11–20 players, pay four places, roughly 50/25/15/10. Our guide on <a href="how-to-run-a-home-poker-tournament.html">how to run a home poker tournament</a> covers buy-ins, payouts, and chips per player.</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">Try BlindClock</h2>
+    <p>The payout calculator is free. ICM chops with chip counting are part of BlindClock Pro, a one-time purchase.</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">Download on the App Store</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">Home</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:panshikai0117@gmail.com">Contact</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock is an independent poker tournament blind timer and tournament clock app for iPhone &amp; iPad.
+  </div>
+</footer>
+
+</body>
+</html>

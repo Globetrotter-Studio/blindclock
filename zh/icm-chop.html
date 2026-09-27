@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>ICM 分錢怎麼算？撲克錦標賽談判分獎金教學（附算例）| BlindClock</title>
+  <meta name="description" content="撲克錦標賽剩下幾個人想提早分獎金時，ICM 分錢怎麼算？用新台幣實際算例比較平分、籌碼比例分錢和 ICM 分錢，一步步說明 ICM 的計算方式、兩人對決時的結果、談分錢前要先講好的事，以及它沒考慮到的因素，並示範如何用 BlindClock 計算。">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated zh-Hant version of /icm-chop.html (not built from templates), amounts in NT$
+       (English example × 10). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/zh/icm-chop.html">
+  <meta property="og:title" content="ICM 分錢怎麼算？撲克錦標賽談判分獎金教學（附算例）">
+  <meta property="og:description" content="撲克錦標賽剩下幾個人想提早分獎金時，ICM 分錢怎麼算？用新台幣實際算例比較平分、籌碼比例分錢和 ICM 分錢，一步步說明 ICM 的計算方式、兩人對決時的結果、談分錢前要先講好的事，以及它沒考慮到的因素，並示範如何用 BlindClock 計算。">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BlindClock App 圖示與名稱，iPhone 與 iPad 的撲克錦標賽盲注計時器">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICM 分錢怎麼算？撲克錦標賽談判分獎金教學（附算例）">
+  <meta name="twitter:description" content="撲克錦標賽剩下幾個人想提早分獎金時，ICM 分錢怎麼算？用新台幣實際算例比較平分、籌碼比例分錢和 ICM 分錢，一步步說明 ICM 的計算方式、兩人對決時的結果、談分錢前要先講好的事，以及它沒考慮到的因素，並示範如何用 BlindClock 計算。">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/zh/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/zh/icm-chop.html","headline":"ICM 分錢怎麼算：撲克錦標賽談判分獎金教學","description":"撲克錦標賽剩下幾個人想提早分獎金時，ICM 分錢怎麼算？用新台幣實際算例比較平分、籌碼比例分錢和 ICM 分錢，一步步說明 ICM 的計算方式、兩人對決時的結果、談分錢前要先講好的事，以及它沒考慮到的因素，並示範如何用 BlindClock 計算。","image":"https://blindclock.app/assets/og.png","inLanguage":"zh-Hant","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">首頁</a>
+      <a href="support.html">支援</a>
+      <a href="privacy.html">隱私權</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>ICM 分錢怎麼算：撲克錦標賽談判分獎金教學</h1>
+  <p class="meta">2026 年 9 月更新 · 附家庭牌局與小型俱樂部的實際算例 · <a href="../icm-chop.html" hreflang="en" lang="en">English</a></p>
+
+  <div class="prose">
+
+    <p>ICM 分錢是錦標賽剩下的玩家同意不再打下去，改用 ICM（Independent Chip Model，獨立籌碼模型）分掉剩餘獎金的做法。ICM 會依每個人的籌碼，算出他拿到每個獎金名次的機率，再用這些機率算出他平均能拿多少錢。跟直接按籌碼比例分相比，ICM 會多給短碼一點、少給籌碼最多的人一點，因為在錦標賽裡，籌碼越多，每多一個籌碼的價值就越低。</p>
+
+    <h2 id="when">什麼時候會談分錢</h2>
+    <ul>
+      <li>錦標賽後段，盲注相對籌碼很大，幾乎每手都是全下。剩下的玩家常會同意停下來分錢，時間晚了更常見。</li>
+      <li>談分錢需要所有剩下的玩家都同意。只要有一個人不同意，就繼續打。</li>
+      <li>開始算之前，先決定要把錢全部分完，還是留一部分給最後的贏家，例如 NT$500 和獎盃，並把金額寫下來。</li>
+      <li>在賭場或俱樂部，同意之前要先告知 tournament director，各場地的規定不同。</li>
+    </ul>
+
+    <h2 id="three-ways">三種分錢方式</h2>
+    <ul>
+      <li><b>平分。</b>每個人拿一樣多。簡單，但完全不看籌碼，只有籌碼差不多時才公平。</li>
+      <li><b>籌碼比例分錢（chip chop）。</b>每個人先拿還沒發出去的最低名次獎金，剩下的再按籌碼比例分。可以手算。</li>
+      <li><b>ICM 分錢。</b>每個人拿自己籌碼的 ICM 價值。剩三個人以上時需要用計算器。</li>
+    </ul>
+
+    <h2 id="example">實際算例：剩三個人</h2>
+    <p>12 個人各付 NT$500，獎池 NT$6,000，前三名分別拿 NT$3,000、NT$1,800、NT$1,200。剩下三個人，場上籌碼共 60,000：</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">玩家</th>
+            <th scope="col">籌碼</th>
+            <th scope="col">籌碼占比</th>
+            <th scope="col">平分</th>
+            <th scope="col">籌碼比例分錢</th>
+            <th scope="col">ICM 分錢</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30,000</td><td>50.0%</td><td>NT$2,000</td><td>NT$2,400</td><td>NT$2,310</td></tr>
+          <tr><th scope="row">B</th><td>20,000</td><td>33.3%</td><td>NT$2,000</td><td>NT$2,000</td><td>NT$2,040</td></tr>
+          <tr><th scope="row">C</th><td>10,000</td><td>16.7%</td><td>NT$2,000</td><td>NT$1,600</td><td>NT$1,650</td></tr>
+          <tr><th scope="row">合計</th><td>60,000</td><td>100%</td><td>NT$6,000</td><td>NT$6,000</td><td>NT$6,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">籌碼比例分錢：每人先拿第三名的 NT$1,200，剩下的 NT$2,400 再按籌碼比例分。</p>
+    <p>為什麼不把 NT$6,000 全部按籌碼比例分？那樣 C 只拿到 NT$1,000，比他已經確定的第三名獎金 NT$1,200 還少。所以籌碼比例分錢會先發給每人最低名次的獎金。ICM 更進一步，再從籌碼最多的人那裡移 NT$90 給兩個短碼。</p>
+
+    <h2 id="how-icm-works">ICM 的數字怎麼算出來</h2>
+    <p>ICM 先用籌碼算出每個人拿第一、第二、第三名的機率，再把每個機率乘上該名次的獎金。以玩家 A 為例：</p>
+    <ol>
+      <li><b>拿第一名的機率</b>就是籌碼占比：30,000 ÷ 60,000 = 50%。</li>
+      <li><b>拿第二名的機率</b>要把「別人拿第一」的每種情況加起來。如果 B 拿第一（機率 1/3），剩下的 40,000 籌碼裡 A 占 30,000，也就是 75%。如果 C 拿第一（1/6），剩下的 50,000 裡 A 占 30,000，也就是 60%。合起來是 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35%。</li>
+      <li><b>拿第三名的機率</b>就是剩下的部分：100% − 50% − 35% = 15%。</li>
+      <li><b>ICM 價值</b>是每個機率乘上獎金再加總：50% × 3,000 + 35% × 1,800 + 15% × 1,200 = 1,500 + 630 + 180 = NT$2,310。</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">玩家</th>
+            <th scope="col">第一名機率</th>
+            <th scope="col">第二名機率</th>
+            <th scope="col">第三名機率</th>
+            <th scope="col">ICM 價值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50.0%</td><td>35.0%</td><td>15.0%</td><td>NT$2,310</td></tr>
+          <tr><th scope="row">B</th><td>33.3%</td><td>40.0%</td><td>26.7%</td><td>NT$2,040</td></tr>
+          <tr><th scope="row">C</th><td>16.7%</td><td>25.0%</td><td>58.3%</td><td>NT$1,650</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>這是 Malmuth-Harville 模型，也是大部分 ICM 計算器用的版本。人數越多，可能的完賽順序增加得越快（四個人就有 24 種），所以建議用計算器。</p>
+
+    <h2 id="heads-up">兩人對決時，ICM 和籌碼比例分錢結果一樣</h2>
+    <p>只剩兩個人時，ICM 分錢和籌碼比例分錢的結果相同。假設獎金是 NT$3,000 和 NT$1,800，籌碼是 40,000 和 20,000。兩人各先拿 NT$1,800，剩下的 NT$1,200 按二比一分，籌碼多的人拿 NT$2,600，另一人拿 NT$2,200。</p>
+
+    <h2 id="limits">ICM 沒考慮到的事</h2>
+    <ul>
+      <li><b>技術。</b>比較強的玩家要求比 ICM 多一點，也合理。</li>
+      <li><b>盲注和位置。</b>ICM 只看籌碼，不管誰下一手要下大盲、盲注有多大。</li>
+      <li><b>大家願意接受什麼。</b>玩家常會把數字取整，或留一部分錢繼續打。把 ICM 當成談判的起點，不是規則。</li>
+    </ul>
+
+    <h2 id="in-blindclock">怎麼用 BlindClock 算</h2>
+    <p>ICM 分錢是 <a href="support.html#faq-icm-chop">BlindClock Pro</a> 的功能。從時鐘畫面打開獎池計算器，把<b>結算方式</b>切到<b>牌桌分錢</b>，再輸入每位玩家的籌碼。也可以點玩家旁邊的籌碼圖示，逐面額清點籌碼。BlindClock 最多可以算 9 位玩家的分錢，金額先無條件捨去到整數，零頭給籌碼最多的人，所以加總剛好等於獎池。如果賽事有設定起始籌碼，分錢前還會比對你輸入的籌碼和場上籌碼是否一致。</p>
+
+    <h2 id="faq">常見問題</h2>
+
+    <h3>ICM 分錢公平嗎？</h3>
+    <p>它是把籌碼換算成獎金最常用的方法，比單純按籌碼比例分更能保障短碼。不過它不考慮技術和盲注，所以玩家可以在同意前自行調整。</p>
+
+    <h3>ICM 分錢和籌碼比例分錢有什麼不同？</h3>
+    <p>籌碼比例分錢是先發給每人最低的剩餘獎金，剩下的按籌碼比例分。ICM 分錢則用每個人拿到各名次的機率來算，會從籌碼最多的人那裡移一點錢給短碼。只剩兩個人時，兩種方法結果一樣。</p>
+
+    <h3>超過三個人也能用 ICM 嗎？</h3>
+    <p>可以。方法一樣，但計算量增加得很快，建議用計算器。BlindClock 最多可以算 9 個人，也就是一整張決賽桌。</p>
+
+    <h3>談分錢需要所有人都同意嗎？</h3>
+    <p>需要。所有剩下的玩家都同意才能分錢。在賭場或俱樂部，也要告知 tournament director，各場地的規定不同。</p>
+
+    <h3>還沒談分錢之前，家庭錦標賽的獎金該怎麼分配？</h3>
+    <p>10 人以內，前三名分獎池的 50%、30%、20%；11 到 20 人，付四個名次，大約 50%、25%、15%、10%。<a href="support.html#faq-payout-structure">支援頁的常見問題</a>有更多說明。</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">試試 BlindClock</h2>
+    <p>獎池計算器免費。含籌碼清點的 ICM 分錢是 BlindClock Pro 的功能，Pro 一次買斷。</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">前往 App Store 下載</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">首頁</a>
+    <a href="support.html">支援</a>
+    <a href="privacy.html">隱私權政策</a>
+    <a href="mailto:panshikai0117@gmail.com">聯絡我們</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock 是一款獨立開發的撲克錦標賽盲注計時器（錦標賽時鐘）App，適用於 iPhone 與 iPad。
+  </div>
+</footer>
+
+</body>
+</html>

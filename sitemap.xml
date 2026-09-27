@@ -716,4 +716,18 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/poker-clock-on-tv.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://blindclock.app/poker-clock-on-tv.html"/>
   </url>
+  <url>
+    <loc>https://blindclock.app/icm-chop.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html"/>
+  </url>
+  <url>
+    <loc>https://blindclock.app/zh/icm-chop.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html"/>
+  </url>
 </urlset>
