@@ -259,6 +259,7 @@ def jsonld_index(code, slug, hreflang, meta_entry, app_version, min_os, lastmod)
         "@id": SITE + "/#org",
         "name": "Globetrotter Studio",
         "url": SITE + "/",
+        "founder": {"@type": "Person", "name": "Shi-Kai Pan"},
         "email": CONTACT_EMAIL,
         "logo": SITE + "/assets/icon-large.png",
     }
@@ -412,7 +413,7 @@ def write_llms(app_version, min_os, lastmods):
     langs_line = ", ".join("/%s/ %s" % (s, l) for _c, s, _hl, l, _og in LANGS if s)
     txt = """# BlindClock
 
-> BlindClock is a poker tournament blind timer (tournament clock) app for iPhone and iPad by Globetrotter Studio. Free download with an optional one-time Pro purchase — no account, no ads, no subscription. Requires %s. Current version: %s (site updated %s).
+> BlindClock is a poker tournament blind timer (tournament clock) app for iPhone and iPad by Globetrotter Studio (Shi-Kai Pan). Free download with an optional one-time Pro purchase — no account, no ads, no subscription. Requires %s. Current version: %s (site updated %s).
 
 Key features: blind structure generator, time bank, payout calculator, Live Activity and Dynamic Island, iPad landscape table display, live table stats (players remaining, average stack), iCloud sync, Big Screen Mode on a TV or projector with the device as remote (Pro), ICM chop and payout templates (Pro). Available in 12 languages.
 
