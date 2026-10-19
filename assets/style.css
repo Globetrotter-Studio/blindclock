@@ -428,6 +428,7 @@ table.structures tr.meta-row td {
 .prose li { margin: 6px 0; }
 
 .prose a { color: var(--gold-bright); }
+.page .meta a { color: var(--gold-bright); }
 
 .prose h3 {
   font-size: 19px;
