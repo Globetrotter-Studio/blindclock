@@ -60,6 +60,9 @@ EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html", "best-poker-timer-a
 # in that language link to the copy instead of the English original (e.g. the
 # support FAQ's s48 link).
 EXTRA_TRANSLATIONS = {
+    "how-to-run-a-home-poker-tournament.html": {c: "%s/how-to-run-a-home-poker-tournament.html" % s for c, s in [
+        ("zh-Hant", "zh"), ("ja", "jp"), ("ko", "ko"), ("de", "de"), ("fr-FR", "fr"), ("it", "it"),
+        ("pl", "pl"), ("pt-BR", "pt"), ("es-MX", "es"), ("tr", "tr"), ("vi", "vi")]},
     "best-poker-timer-apps.html": {"zh-Hant": "zh/best-poker-timer-apps.html"},
     "poker-clock-on-tv.html": {"zh-Hant": "zh/poker-clock-on-tv.html"},
     "icm-chop.html": {c: "%s/icm-chop.html" % s for c, s in [
@@ -423,7 +426,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 
 - [Home](%s/): features, screenshots, sample blind structures (turbo / standard / deep stack), and what's new in the latest version
 - [Support & FAQ](%s/support.html): sounds, Pro purchase and restore, iCloud sync, sharing tournaments, Live Activity, big-screen TV mode, ICM chops, supported devices, plus hosting basics — blind level length, payout splits, chips per player, creating a blind structure
-- [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English only)
+- [How to run a home poker tournament](%s/how-to-run-a-home-poker-tournament.html): hosting guide — buy-in and payouts, chips per player, blind structures, running the clock (English original; translated into all 11 other site languages at /<slug>/how-to-run-a-home-poker-tournament.html)
 - [Best poker timer apps for iPhone and iPad](%s/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer
 - [iPhone 與 iPad 德州撲克盲注計時器 App 比較](%s/zh/best-poker-timer-apps.html): Traditional Chinese version of the comparison, with Taiwan App Store prices (NT$), which apps have a Traditional Chinese interface, and which are not sold in Taiwan
 - [How to put a poker clock on your TV](%s/poker-clock-on-tv.html): AirPlay vs HDMI adapters for iPhone and iPad, step-by-step setup, mirroring vs a dedicated TV layout, what BlindClock's Big Screen Mode shows (Pro), and fixes when the TV won't connect (English; Traditional Chinese version at /zh/poker-clock-on-tv.html)

@@ -10,10 +10,22 @@
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css?v=2.5">
-  <!-- English-only guide page: deliberate hreflang exception (en + x-default only).
-       Not part of the 12-language build loop — see _build_pages.py EXTRA_EN_PAGES. -->
+  <script src="assets/lang.js?v=2.5" defer></script>
+  <!-- Hosting guide, English original. hreflang: all 12 site languages (hand-translated
+       copies at /<slug>/how-to-run-a-home-poker-tournament.html) + x-default. -->
   <link rel="canonical" href="https://blindclock.app/how-to-run-a-home-poker-tournament.html">
   <link rel="alternate" hreflang="en" href="https://blindclock.app/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/how-to-run-a-home-poker-tournament.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/how-to-run-a-home-poker-tournament.html">
   <link rel="alternate" hreflang="x-default" href="https://blindclock.app/how-to-run-a-home-poker-tournament.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="BlindClock">
@@ -44,6 +56,7 @@
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </div>
+    <select id="lang-select" class="lang-select" aria-label="Language"></select>
   </div>
 </nav>
 
