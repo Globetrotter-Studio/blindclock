@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>ICM 분배 계산법: 포커 토너먼트 상금 나누는 방법(계산 예시) | BlindClock</title>
+  <meta name="description" content="포커 토너먼트에서 남은 플레이어들이 상금을 나누기로 했을 때 ICM 분배는 어떻게 계산할까요? 원화 계산 예시로 균등 분배, 칩 비율 분배, ICM 분배를 비교하고 계산 과정을 단계별로 설명합니다.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated Korean version of /icm-chop.html (not built from templates), amounts in KRW
+       (English example × 1,000). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/icm-chop.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/icm-chop.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/icm-chop.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/icm-chop.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/ko/icm-chop.html">
+  <meta property="og:title" content="ICM 분배 계산법: 포커 토너먼트 상금 나누는 방법(계산 예시)">
+  <meta property="og:description" content="포커 토너먼트에서 남은 플레이어들이 상금을 나누기로 했을 때 ICM 분배는 어떻게 계산할까요? 원화 계산 예시로 균등 분배, 칩 비율 분배, ICM 분배를 비교하고 계산 과정을 단계별로 설명합니다.">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BlindClock 앱 아이콘과 이름, iPhone·iPad용 포커 토너먼트 블라인드 타이머">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICM 분배 계산법: 포커 토너먼트 상금 나누는 방법(계산 예시)">
+  <meta name="twitter:description" content="포커 토너먼트에서 남은 플레이어들이 상금을 나누기로 했을 때 ICM 분배는 어떻게 계산할까요? 원화 계산 예시로 균등 분배, 칩 비율 분배, ICM 분배를 비교하고 계산 과정을 단계별로 설명합니다.">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/ko/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/ko/icm-chop.html","headline":"ICM 분배 계산법: 포커 토너먼트 상금 나누는 방법","description":"포커 토너먼트에서 남은 플레이어들이 상금을 나누기로 했을 때 ICM 분배는 어떻게 계산할까요? 원화 계산 예시로 균등 분배, 칩 비율 분배, ICM 분배를 비교하고 계산 과정을 단계별로 설명합니다.","image":"https://blindclock.app/assets/og.png","inLanguage":"ko","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">홈</a>
+      <a href="support.html">지원</a>
+      <a href="privacy.html">개인정보 보호</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>ICM 분배 계산법: 포커 토너먼트 상금 나누는 방법</h1>
+  <p class="meta">2026년 9월 업데이트 · 홈 게임과 소규모 클럽을 위한 계산 예시 · <a href="../icm-chop.html" hreflang="en" lang="en">English</a> / <a href="../zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> / <a href="../jp/icm-chop.html" hreflang="ja" lang="ja">日本語</a> / <a href="../de/icm-chop.html" hreflang="de" lang="de">Deutsch</a> / <a href="../fr/icm-chop.html" hreflang="fr" lang="fr">Français</a> / <a href="../it/icm-chop.html" hreflang="it" lang="it">Italiano</a> / <a href="../pl/icm-chop.html" hreflang="pl" lang="pl">Polski</a> / <a href="../pt/icm-chop.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> / <a href="../es/icm-chop.html" hreflang="es-MX" lang="es-MX">Español (LA)</a> / <a href="../tr/icm-chop.html" hreflang="tr" lang="tr">Türkçe</a> / <a href="../vi/icm-chop.html" hreflang="vi" lang="vi">Tiếng Việt</a></p>
+
+  <div class="prose">
+
+    <p>ICM 분배(ICM chop)는 토너먼트에 남은 플레이어들이 게임을 멈추고 남은 상금을 독립 칩 모델(ICM)로 나누는 합의입니다. ICM은 각 플레이어의 칩 수를 상금 순위별로 끝낼 확률로 바꾸고, 그 확률이 가진 가치의 평균을 각자에게 지급합니다. 칩 수 비율로 나눌 때보다 숏스택은 조금 더 받고 칩 리더는 조금 덜 받습니다. 토너먼트에서는 칩을 많이 가질수록 칩 하나가 갖는 가치가 줄어들기 때문입니다.</p>
+
+    <h2 id="when">상금 분배 합의는 언제 하나요</h2>
+    <ul>
+      <li>토너먼트 후반에는 스택에 비해 블라인드가 커서 대부분의 핸드가 올인으로 끝납니다. 시간이 늦어지면 남은 플레이어들이 게임을 멈추고 상금을 나누기로 하는 경우가 많습니다.</li>
+      <li>합의하려면 남은 플레이어 전원이 동의해야 합니다. 한 명이라도 반대하면 게임을 계속합니다.</li>
+      <li>계산하기 전에 상금 전부를 나눌지, 우승자에게 ₩50,000과 트로피처럼 일부를 남겨 두고 계속 플레이할지 정하세요. 정한 숫자는 적어 두세요.</li>
+      <li>카지노나 클럽에서는 합의하기 전에 토너먼트 디렉터에게 알리세요. 하우스 규칙이 적용될 수 있습니다.</li>
+    </ul>
+
+    <h2 id="three-ways">상금을 나누는 세 가지 방법</h2>
+    <ul>
+      <li><b>균등 분배.</b> 모두가 같은 금액을 받습니다. 간단하지만 칩 수를 무시하므로 스택이 비슷할 때만 공평하게 느껴집니다.</li>
+      <li><b>칩 비율 분배(칩 찹).</b> 먼저 모두가 아직 지급되지 않은 가장 낮은 상금을 받고, 나머지는 각자의 칩 비율대로 나눕니다. 손으로 계산하기 쉽습니다.</li>
+      <li><b>ICM 분배.</b> 모두가 자기 스택의 ICM 가치를 받습니다. 세 명 이상 남았다면 계산기가 필요합니다.</li>
+    </ul>
+
+    <h2 id="example">계산 예시: 세 명이 남았을 때</h2>
+    <p>12명이 각각 ₩50,000을 냈으므로 상금 풀은 ₩600,000이고, 상금은 ₩300,000, ₩180,000, ₩120,000입니다. 플레이 중인 칩 60,000개를 세 명이 나눠 가지고 있습니다.</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">플레이어</th>
+            <th scope="col">칩</th>
+            <th scope="col">칩 비율</th>
+            <th scope="col">균등 분배</th>
+            <th scope="col">칩 비율 분배</th>
+            <th scope="col">ICM 분배</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30,000</td><td>50.0%</td><td>₩200,000</td><td>₩240,000</td><td>₩231,000</td></tr>
+          <tr><th scope="row">B</th><td>20,000</td><td>33.3%</td><td>₩200,000</td><td>₩200,000</td><td>₩204,000</td></tr>
+          <tr><th scope="row">C</th><td>10,000</td><td>16.7%</td><td>₩200,000</td><td>₩160,000</td><td>₩165,000</td></tr>
+          <tr><th scope="row">합계</th><td>60,000</td><td>100%</td><td>₩600,000</td><td>₩600,000</td><td>₩600,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">칩 비율 분배: 각 플레이어가 3등 상금 ₩120,000을 먼저 받고, 남은 ₩240,000을 칩 비율대로 나눕니다.</p>
+    <p>₩600,000 전부를 칩 비율로 나누면 어떻게 될까요? 플레이어 C는 ₩100,000을 받게 되는데, 이는 3등으로 이미 확보한 ₩120,000보다 적습니다. 그래서 칩 비율 분배는 모두에게 가장 낮은 상금을 먼저 지급합니다. ICM은 여기서 한 걸음 더 나아가 칩 리더의 몫에서 ₩9,000을 더 떼어 두 숏스택에게 옮깁니다.</p>
+
+    <h2 id="how-icm-works">ICM 금액은 어떻게 계산하나요</h2>
+    <p>ICM은 칩 수로 각 플레이어가 1등, 2등, 3등으로 끝낼 확률을 구한 뒤, 각 확률에 그 순위의 상금을 곱합니다. 플레이어 A를 예로 들면 다음과 같습니다.</p>
+    <ol>
+      <li><b>1등 확률</b>은 칩 비율과 같습니다. 30,000 ÷ 60,000 = 50%.</li>
+      <li><b>2등 확률</b>은 다른 플레이어가 1등을 하는 모든 경우를 더해 구합니다. B가 1등을 하면(확률 1/3) 남은 칩 40,000개 중 A가 30,000개를 가지므로 75%입니다. C가 1등을 하면(확률 1/6) 남은 50,000개 중 30,000개이므로 60%입니다. 따라서 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35%.</li>
+      <li><b>3등 확률</b>은 나머지입니다. 100% − 50% − 35% = 15%.</li>
+      <li><b>ICM 가치</b>는 각 확률에 상금을 곱해 더한 값입니다. 50% × ₩300,000 + 35% × ₩180,000 + 15% × ₩120,000 = ₩150,000 + ₩63,000 + ₩18,000 = ₩231,000.</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">플레이어</th>
+            <th scope="col">1등 확률</th>
+            <th scope="col">2등 확률</th>
+            <th scope="col">3등 확률</th>
+            <th scope="col">ICM 가치</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50.0%</td><td>35.0%</td><td>15.0%</td><td>₩231,000</td></tr>
+          <tr><th scope="row">B</th><td>33.3%</td><td>40.0%</td><td>26.7%</td><td>₩204,000</td></tr>
+          <tr><th scope="row">C</th><td>16.7%</td><td>25.0%</td><td>58.3%</td><td>₩165,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>이것은 대부분의 계산기가 사용하는 ICM 방식인 Malmuth-Harville 모델입니다. 플레이어가 많아지면 가능한 순위 조합이 빠르게 늘어나므로(네 명만 돼도 24가지) 계산기를 쓰세요.</p>
+
+    <h2 id="heads-up">헤즈업에서는 ICM과 칩 비율 분배가 같습니다</h2>
+    <p>두 명이 남았을 때는 ICM과 칩 비율 분배의 결과가 같습니다. 상금이 ₩300,000과 ₩180,000이고 스택이 40,000과 20,000이라고 해 봅시다. 두 사람이 각각 ₩180,000을 받고, 남은 ₩120,000을 2 대 1로 나누므로 칩 리더는 ₩260,000, 다른 플레이어는 ₩220,000을 받습니다.</p>
+
+    <h2 id="limits">ICM이 고려하지 않는 것</h2>
+    <ul>
+      <li><b>실력.</b> 더 강한 플레이어가 ICM 금액보다 더 많이 요구하는 것도 무리는 아닙니다.</li>
+      <li><b>블라인드와 포지션.</b> ICM은 칩 수만 봅니다. 누가 곧 빅블라인드를 낼지, 블라인드가 얼마나 큰지는 보지 않습니다. 블라인드와 포지션까지 포함해 숏스택 플레이를 연습하고 싶다면 토너먼트 플레이어를 위한 무료 푸시/폴드 트레이너 <a href="https://www.pushfoldtrainer.com/" target="_blank" rel="noopener">Push Fold Trainer</a>(영어)를 써 보세요.</li>
+      <li><b>서로 합의한 내용.</b> 플레이어들은 금액을 반올림하거나 일부를 남겨 두고 계속 플레이하기도 합니다. ICM은 규칙이 아니라 이야기를 시작하는 기준으로 생각하세요.</li>
+    </ul>
+
+    <h2 id="in-blindclock">BlindClock에서 계산하는 방법</h2>
+    <p>ICM 분배는 <a href="support.html#faq-icm-chop">BlindClock Pro</a> 기능입니다. 시계 화면에서 <b>상금 계산기</b>를 열고 <b>분배 방식</b>을 <b>분배</b>로 설정한 뒤 각 플레이어의 칩 수를 입력하세요. 플레이어 옆의 칩 아이콘으로 스택을 액면가별로 셀 수도 있습니다. BlindClock은 최대 9명까지 각자의 몫을 계산하고, 금액은 단위 아래를 내림한 뒤 남는 금액을 가장 큰 스택에 주므로 정산액 합계가 상금 풀과 정확히 일치합니다. 토너먼트에 시작 스택이 설정되어 있다면, 상금을 나누기 전에 입력한 칩이 플레이 중인 칩과 맞는지도 확인해 줍니다.</p>
+
+    <h2 id="faq">자주 묻는 질문</h2>
+
+    <h3>ICM 분배는 공평한가요?</h3>
+    <p>칩 수를 금액으로 바꾸는 방법 중 가장 널리 쓰이며, 단순한 칩 비율 분배보다 숏스택을 더 잘 보호합니다. 실력이나 블라인드는 반영하지 않으므로 합의하기 전에 플레이어들이 자유롭게 조정해도 됩니다.</p>
+
+    <h3>ICM 분배와 칩 비율 분배는 무엇이 다른가요?</h3>
+    <p>칩 비율 분배는 모두에게 남은 상금 중 가장 낮은 금액을 먼저 주고, 나머지를 칩 비율대로 나눕니다. ICM 분배는 각 플레이어가 순위별로 끝낼 확률을 사용하므로 칩 리더의 돈이 조금 숏스택 쪽으로 옮겨 갑니다. 두 명이 남았을 때는 결과가 같습니다.</p>
+
+    <h3>세 명보다 많아도 ICM을 쓸 수 있나요?</h3>
+    <p>네. 방법은 같지만 계산량이 빠르게 늘어나므로 계산기를 쓰세요. BlindClock은 파이널 테이블 전체인 최대 9명까지 계산합니다.</p>
+
+    <h3>분배하려면 모든 플레이어가 동의해야 하나요?</h3>
+    <p>네. 합의하려면 남은 플레이어 전원이 동의해야 합니다. 카지노나 클럽에서는 하우스마다 규칙이 다르므로 토너먼트 디렉터에게도 알리세요.</p>
+
+    <h3>합의가 없을 때 홈 토너먼트 상금은 어떻게 나누나요?</h3>
+    <p>참가자가 10명 이하면 상위 3명에게 상금 풀의 50/30/20%를 배분하세요. 11–20명이면 상위 4명에게 약 50/25/15/10%를 배분합니다. 바이인, 상금 분배, 1인당 칩 수는 <a href="../how-to-run-a-home-poker-tournament.html" hreflang="en" lang="en">홈 포커 토너먼트 운영 가이드</a>(영어)에서 자세히 다룹니다.</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">BlindClock 사용해 보기</h2>
+    <p>상금 계산기는 무료입니다. 칩 세기가 포함된 ICM 분배는 BlindClock Pro 기능이며, Pro는 일회성 구매입니다.</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">App Store에서 다운로드</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">홈</a>
+    <a href="support.html">지원</a>
+    <a href="privacy.html">개인정보 처리방침</a>
+    <a href="mailto:panshikai0117@gmail.com">문의하기</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock은 독립적으로 개발된 iPhone·iPad용 포커 토너먼트 블라인드 타이머(토너먼트 클록) 앱입니다.
+  </div>
+</footer>
+
+</body>
+</html>

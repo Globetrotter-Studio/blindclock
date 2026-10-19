@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl" data-lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>Chop ICM w pokerze: jak podzielić pulę nagród turnieju | BlindClock</title>
+  <meta name="description" content="Jak działa chop ICM, gdy gracze dogadują się na podział puli. Przykład z liczbami porównuje podział po równo, chip chop i ICM oraz pokazuje obliczenia krok po kroku.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated Polish version of /icm-chop.html (not built from templates), amounts in PLN
+       (English example × 1). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/icm-chop.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/icm-chop.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/icm-chop.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/icm-chop.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/pl/icm-chop.html">
+  <meta property="og:title" content="Chop ICM w pokerze: jak podzielić pulę nagród turnieju">
+  <meta property="og:description" content="Jak działa chop ICM, gdy gracze dogadują się na podział puli. Przykład z liczbami porównuje podział po równo, chip chop i ICM oraz pokazuje obliczenia krok po kroku.">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ikona i nazwa aplikacji BlindClock, zegara blindów do turniejów pokerowych na iPhone’a i iPada">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chop ICM w pokerze: jak podzielić pulę nagród turnieju">
+  <meta name="twitter:description" content="Jak działa chop ICM, gdy gracze dogadują się na podział puli. Przykład z liczbami porównuje podział po równo, chip chop i ICM oraz pokazuje obliczenia krok po kroku.">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/pl/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/pl/icm-chop.html","headline":"Chop ICM w pokerze: jak podzielić pulę nagród turnieju","description":"Jak działa chop ICM, gdy gracze dogadują się na podział puli. Przykład z liczbami porównuje podział po równo, chip chop i ICM oraz pokazuje obliczenia krok po kroku.","image":"https://blindclock.app/assets/og.png","inLanguage":"pl","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="Ikona BlindClock" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">Strona główna</a>
+      <a href="support.html">Pomoc</a>
+      <a href="privacy.html">Prywatność</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>Chop ICM w pokerze: jak podzielić pulę nagród turnieju</h1>
+  <p class="meta">Aktualizacja: wrzesień 2026 · Przykłady z liczbami dla gier domowych i małych klubów · <a href="../icm-chop.html" hreflang="en" lang="en">English</a> / <a href="../zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> / <a href="../jp/icm-chop.html" hreflang="ja" lang="ja">日本語</a> / <a href="../ko/icm-chop.html" hreflang="ko" lang="ko">한국어</a> / <a href="../de/icm-chop.html" hreflang="de" lang="de">Deutsch</a> / <a href="../fr/icm-chop.html" hreflang="fr" lang="fr">Français</a> / <a href="../it/icm-chop.html" hreflang="it" lang="it">Italiano</a> / <a href="../pt/icm-chop.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> / <a href="../es/icm-chop.html" hreflang="es-MX" lang="es-MX">Español (LA)</a> / <a href="../tr/icm-chop.html" hreflang="tr" lang="tr">Türkçe</a> / <a href="../vi/icm-chop.html" hreflang="vi" lang="vi">Tiếng Việt</a></p>
+
+  <div class="prose">
+
+    <p>Chop ICM to umowa, w której gracze pozostali w turnieju przestają grać i dzielą resztę puli nagród według modelu Independent Chip Model (ICM). ICM zamienia stack każdego gracza na szanse zajęcia każdego płatnego miejsca i wypłaca mu średnią wartość tych szans. W porównaniu z podziałem według żetonów daje trochę więcej krótkim stackom i trochę mniej liderowi, bo w turnieju każdy kolejny żeton jest wart tym mniej, im więcej żetonów już masz.</p>
+
+    <h2 id="when">Kiedy gracze dogadują się na podział</h2>
+    <ul>
+      <li>Pod koniec turnieju blindy są duże w stosunku do stacków i większość rozdań kończy się all-inem. Pozostali gracze często umawiają się, żeby przerwać grę i podzielić pieniądze, zwłaszcza gdy robi się późno.</li>
+      <li>Na podział muszą się zgodzić wszyscy pozostali gracze. Jeśli ktoś odmówi, gracie dalej.</li>
+      <li>Zanim zaczniecie liczyć, ustalcie, czy dzielicie całą pulę, czy zostawiacie część do wygrania, na przykład 50 zł i puchar dla zwycięzcy. Zapiszcie kwoty.</li>
+      <li>W kasynie lub klubie powiedz o tym dyrektorowi turnieju, zanim się zgodzicie. Mogą obowiązywać zasady sali.</li>
+    </ul>
+
+    <h2 id="three-ways">Trzy sposoby podziału pieniędzy</h2>
+    <ul>
+      <li><b>Podział po równo.</b> Każdy dostaje tyle samo. To proste, ale pomija stacki, więc wydaje się uczciwe tylko wtedy, gdy stacki są zbliżone.</li>
+      <li><b>Chip chop.</b> Każdy najpierw bierze najniższą niewypłaconą jeszcze nagrodę, a resztę dzieli się według udziału w żetonach. Łatwo to policzyć ręcznie.</li>
+      <li><b>Chop ICM.</b> Każdy dostaje wartość ICM swojego stacka. Gdy zostaje więcej niż dwóch graczy, potrzebny jest kalkulator.</li>
+    </ul>
+
+    <h2 id="example">Przykład: zostało trzech graczy</h2>
+    <p>Dwunastu graczy wpłaciło po 50 zł, więc pula wynosi 600 zł, a nagrody to 300 zł, 180 zł i 120 zł. Zostało trzech graczy, którzy mają wszystkie 60&nbsp;000 żetonów w grze:</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Gracz</th>
+            <th scope="col">Żetony</th>
+            <th scope="col">Udział w żetonach</th>
+            <th scope="col">Po równo</th>
+            <th scope="col">Chip chop</th>
+            <th scope="col">Chop ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30&nbsp;000</td><td>50,0%</td><td>200 zł</td><td>240 zł</td><td>231 zł</td></tr>
+          <tr><th scope="row">B</th><td>20&nbsp;000</td><td>33,3%</td><td>200 zł</td><td>200 zł</td><td>204 zł</td></tr>
+          <tr><th scope="row">C</th><td>10&nbsp;000</td><td>16,7%</td><td>200 zł</td><td>160 zł</td><td>165 zł</td></tr>
+          <tr><th scope="row">Razem</th><td>60&nbsp;000</td><td>100%</td><td>600 zł</td><td>600 zł</td><td>600 zł</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Chip chop: każdy gracz bierze 120 zł za trzecie miejsce, a pozostałe 240 zł dzieli się według udziału w żetonach.</p>
+    <p>Dlaczego nie podzielić całych 600 zł według udziału w żetonach? Gracz C dostałby 100 zł, czyli mniej niż 120 zł, które ma już pewne za trzecie miejsce. Dlatego chip chop najpierw wypłaca każdemu najniższą nagrodę. ICM idzie o krok dalej i przesuwa jeszcze 9 zł od lidera do dwóch krótszych stacków.</p>
+
+    <h2 id="how-icm-works">Jak liczy się wartości ICM</h2>
+    <p>ICM wylicza ze stacków szansę każdego gracza na zajęcie pierwszego, drugiego i trzeciego miejsca, a potem mnoży każdą szansę przez nagrodę za to miejsce. Oto gracz A:</p>
+    <ol>
+      <li><b>Szansa na pierwsze miejsce</b> to udział w żetonach: 30&nbsp;000 ÷ 60&nbsp;000 = 50%.</li>
+      <li><b>Szansa na drugie miejsce</b> sumuje wszystkie przypadki, w których pierwsze miejsce zajmuje ktoś inny. Jeśli wygra B (szansa 1 do 3), A ma 30&nbsp;000 z pozostałych 40&nbsp;000 żetonów, czyli 75%. Jeśli wygra C (1 do 6), A ma 30&nbsp;000 z pozostałych 50&nbsp;000, czyli 60%. Razem 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35%.</li>
+      <li><b>Szansa na trzecie miejsce</b> to reszta: 100% − 50% − 35% = 15%.</li>
+      <li><b>Wartość ICM</b> to suma iloczynów szans i nagród: 50% × 300 zł + 35% × 180 zł + 15% × 120 zł = 150 zł + 63 zł + 18 zł = 231 zł.</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Gracz</th>
+            <th scope="col">1. miejsce</th>
+            <th scope="col">2. miejsce</th>
+            <th scope="col">3. miejsce</th>
+            <th scope="col">Wartość ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50,0%</td><td>35,0%</td><td>15,0%</td><td>231 zł</td></tr>
+          <tr><th scope="row">B</th><td>33,3%</td><td>40,0%</td><td>26,7%</td><td>204 zł</td></tr>
+          <tr><th scope="row">C</th><td>16,7%</td><td>25,0%</td><td>58,3%</td><td>165 zł</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>To model Malmutha-Harville’a, wersja ICM używana przez większość kalkulatorów. Przy większej liczbie graczy liczba możliwych kolejności szybko rośnie (przy czterech graczach jest ich już 24), więc lepiej użyć kalkulatora.</p>
+
+    <h2 id="heads-up">Heads-up: ICM i chip chop dają to samo</h2>
+    <p>Gdy zostaje dwóch graczy, ICM i chip chop dają ten sam wynik. Załóżmy, że nagrody to 300 zł i 180 zł, a stacki 40&nbsp;000 i 20&nbsp;000. Każdy gracz bierze 180 zł, a pozostałe 120 zł dzieli się w proporcji dwa do jednego, więc lider dostaje 260 zł, a drugi gracz 220 zł.</p>
+
+    <h2 id="limits">Czego ICM nie uwzględnia</h2>
+    <ul>
+      <li><b>Umiejętności.</b> Silniejszy gracz może rozsądnie poprosić o więcej, niż daje mu ICM.</li>
+      <li><b>Blindów i pozycji.</b> ICM patrzy tylko na stacki, a nie na to, kto zaraz płaci big blinda ani jak duże są blindy. Jeśli chcesz ćwiczyć grę krótkim stackiem z uwzględnieniem blindów i pozycji, <a href="https://www.pushfoldtrainer.com/" target="_blank" rel="noopener">Push Fold Trainer</a> to darmowy trener push/fold dla graczy turniejowych (po angielsku).</li>
+      <li><b>Tego, na co zgodzą się gracze.</b> Gracze często zaokrąglają kwoty albo zostawiają część pieniędzy do wygrania. Traktuj ICM jako punkt wyjścia do rozmowy, a nie sztywną zasadę.</li>
+    </ul>
+
+    <h2 id="in-blindclock">Jak zrobić to w BlindClock</h2>
+    <p>Chop ICM jest częścią <a href="support.html#faq-icm-chop">BlindClock Pro</a>. Otwórz <b>Kalkulator wypłat</b> z ekranu zegara, ustaw <b>Sposób podziału</b> na <b>Chop</b> i wpisz stack każdego gracza. Stack możesz też policzyć według nominałów, dotykając ikony żetonu obok gracza. BlindClock oblicza udział każdego gracza (do 9 graczy), zaokrągla w dół do pełnych kwot, a resztę oddaje największemu stackowi, więc wypłaty sumują się dokładnie do puli. Jeśli turniej ma ustawiony stack początkowy, aplikacja sprawdza też, czy wpisane żetony zgadzają się z żetonami w grze, zanim podzielisz pieniądze.</p>
+
+    <h2 id="faq">Najczęściej zadawane pytania</h2>
+
+    <h3>Czy chop ICM jest uczciwy?</h3>
+    <p>To najpowszechniejszy sposób zamiany żetonów na pieniądze i lepiej chroni krótkie stacki niż zwykły podział według żetonów. Nie uwzględnia umiejętności ani blindów, więc gracze mogą go skorygować, zanim się zgodzą.</p>
+
+    <h3>Czym różni się chop ICM od chip chopa?</h3>
+    <p>Chip chop wypłaca każdemu najniższą pozostałą nagrodę, a resztę dzieli według udziału w żetonach. Chop ICM korzysta z szans każdego gracza na zajęcie każdego miejsca, co przesuwa trochę pieniędzy od lidera do krótszych stacków. Przy dwóch graczach oba sposoby dają ten sam wynik.</p>
+
+    <h3>Czy ICM działa przy więcej niż trzech graczach?</h3>
+    <p>Tak. Metoda jest ta sama, ale obliczeń szybko przybywa, więc użyj kalkulatora. BlindClock obsługuje do 9 graczy, czyli pełny stół finałowy.</p>
+
+    <h3>Czy wszyscy gracze muszą zgodzić się na chop?</h3>
+    <p>Tak. Umowa wymaga zgody każdego pozostałego gracza. W kasynie lub klubie powiadom też dyrektora turnieju, bo zasady dotyczące podziałów różnią się między salami.</p>
+
+    <h3>Jak wypłacać nagrody w turnieju domowym bez żadnego podziału?</h3>
+    <p>Przy maksymalnie 10 graczach wypłać trzem pierwszym miejscom 50/30/20 procent puli. Przy 11–20 graczach wypłać czterem miejscom, mniej więcej 50/25/15/10. Nasz poradnik o tym, <a href="how-to-run-a-home-poker-tournament.html">jak zorganizować domowy turniej pokerowy</a>, omawia buy-iny, wypłaty i liczbę żetonów na gracza.</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">Wypróbuj BlindClock</h2>
+    <p>Kalkulator wypłat jest darmowy. Chop ICM z liczeniem żetonów jest częścią BlindClock Pro, jednorazowego zakupu.</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">Pobierz z App Store</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">Strona główna</a>
+    <a href="support.html">Pomoc</a>
+    <a href="privacy.html">Polityka prywatności</a>
+    <a href="mailto:panshikai0117@gmail.com">Kontakt</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock to niezależna aplikacja do turniejów pokerowych: zegar blindów i timer turnieju na iPhone’a i iPada.
+  </div>
+</footer>
+
+</body>
+</html>

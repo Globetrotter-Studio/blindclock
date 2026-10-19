@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr-FR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>Deal ICM au poker : comment partager le prize pool | BlindClock</title>
+  <meta name="description" content="Comment fonctionne un deal ICM quand les joueurs restants partagent le prize pool d’un tournoi de poker : exemple chiffré en euros comparant partage égal, chip chop et ICM, avec le calcul pas à pas.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated fr-FR version of /icm-chop.html (not built from templates), amounts in EUR
+       (English example × 1). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/icm-chop.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/icm-chop.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/icm-chop.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/icm-chop.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/fr/icm-chop.html">
+  <meta property="og:title" content="Deal ICM au poker : comment partager le prize pool">
+  <meta property="og:description" content="Comment fonctionne un deal ICM quand les joueurs restants partagent le prize pool d’un tournoi de poker : exemple chiffré en euros comparant partage égal, chip chop et ICM, avec le calcul pas à pas.">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Icône et nom de l’app BlindClock, timer de blinds pour tournoi de poker sur iPhone et iPad">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deal ICM au poker : comment partager le prize pool">
+  <meta name="twitter:description" content="Comment fonctionne un deal ICM quand les joueurs restants partagent le prize pool d’un tournoi de poker : exemple chiffré en euros comparant partage égal, chip chop et ICM, avec le calcul pas à pas.">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/fr/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/fr/icm-chop.html","headline":"Deal ICM au poker : comment partager le prize pool d’un tournoi","description":"Comment fonctionne un deal ICM quand les joueurs restants partagent le prize pool d’un tournoi de poker : exemple chiffré en euros comparant partage égal, chip chop et ICM, avec le calcul pas à pas.","image":"https://blindclock.app/assets/og.png","inLanguage":"fr","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">Accueil</a>
+      <a href="support.html">Assistance</a>
+      <a href="privacy.html">Confidentialité</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>Deal ICM au poker : comment partager le prize pool d’un tournoi</h1>
+  <p class="meta">Mis à jour en septembre 2026 · Exemples chiffrés pour parties entre amis et petits clubs · <a href="../icm-chop.html" hreflang="en" lang="en">English</a> / <a href="../zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> / <a href="../jp/icm-chop.html" hreflang="ja" lang="ja">日本語</a> / <a href="../ko/icm-chop.html" hreflang="ko" lang="ko">한국어</a> / <a href="../de/icm-chop.html" hreflang="de" lang="de">Deutsch</a> / <a href="../it/icm-chop.html" hreflang="it" lang="it">Italiano</a> / <a href="../pl/icm-chop.html" hreflang="pl" lang="pl">Polski</a> / <a href="../pt/icm-chop.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> / <a href="../es/icm-chop.html" hreflang="es-MX" lang="es-MX">Español (LA)</a> / <a href="../tr/icm-chop.html" hreflang="tr" lang="tr">Türkçe</a> / <a href="../vi/icm-chop.html" hreflang="vi" lang="vi">Tiếng Việt</a></p>
+
+  <div class="prose">
+
+    <p>Un deal ICM (ou ICM chop) est un accord par lequel les joueurs encore en lice arrêtent de jouer et se partagent les gains restants selon l’Independent Chip Model (ICM). L’ICM transforme le tapis de chaque joueur en probabilité de finir à chaque place payée, puis verse à chacun la valeur moyenne de ces probabilités. Par rapport à un partage au prorata des jetons, il donne un peu plus aux petits tapis et un peu moins au chip leader, car en tournoi chaque jeton supplémentaire vaut moins à mesure que votre tapis grossit.</p>
+
+    <h2 id="when">Quand les joueurs font un deal</h2>
+    <ul>
+      <li>En fin de tournoi, les blinds sont élevées par rapport aux tapis et la plupart des coups se jouent à tapis. Les joueurs restants se mettent souvent d’accord pour arrêter et partager l’argent, surtout quand il se fait tard.</li>
+      <li>Un deal exige l’accord de tous les joueurs restants. Si un seul refuse, la partie continue.</li>
+      <li>Avant de compter, décidez si vous partagez tout l’argent ou si vous en gardez une partie à jouer, par exemple 50&#8239;€ et un trophée pour le vainqueur. Notez les chiffres.</li>
+      <li>Dans un casino ou un club, prévenez le directeur de tournoi avant de conclure. Le règlement de la maison peut s’appliquer.</li>
+    </ul>
+
+    <h2 id="three-ways">Trois façons de partager l’argent</h2>
+    <ul>
+      <li><b>Partage égal.</b> Tout le monde reçoit la même somme. C’est simple, mais cela ignore les tapis, donc ce n’est juste que si les tapis sont proches.</li>
+      <li><b>Chip chop.</b> Chacun reçoit d’abord le plus petit prix encore à payer, puis le reste est réparti selon la part de jetons de chaque joueur. Facile à faire à la main.</li>
+      <li><b>Deal ICM.</b> Chacun reçoit la valeur ICM de son tapis. Il faut un calculateur dès qu’il reste plus de deux joueurs.</li>
+    </ul>
+
+    <h2 id="example">Exemple chiffré : trois joueurs restants</h2>
+    <p>Douze joueurs ont payé chacun 50&#8239;€, le prize pool est donc de 600&#8239;€, avec des prix de 300&#8239;€, 180&#8239;€ et 120&#8239;€. Il reste trois joueurs, qui se partagent les 60&#8239;000 jetons en jeu :</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Joueur</th>
+            <th scope="col">Jetons</th>
+            <th scope="col">Part des jetons</th>
+            <th scope="col">Partage égal</th>
+            <th scope="col">Chip chop</th>
+            <th scope="col">Deal ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30&#8239;000</td><td>50,0&#8239;%</td><td>200&#8239;€</td><td>240&#8239;€</td><td>231&#8239;€</td></tr>
+          <tr><th scope="row">B</th><td>20&#8239;000</td><td>33,3&#8239;%</td><td>200&#8239;€</td><td>200&#8239;€</td><td>204&#8239;€</td></tr>
+          <tr><th scope="row">C</th><td>10&#8239;000</td><td>16,7&#8239;%</td><td>200&#8239;€</td><td>160&#8239;€</td><td>165&#8239;€</td></tr>
+          <tr><th scope="row">Total</th><td>60&#8239;000</td><td>100&#8239;%</td><td>600&#8239;€</td><td>600&#8239;€</td><td>600&#8239;€</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Chip chop : chaque joueur prend les 120&#8239;€ du troisième prix, puis les 240&#8239;€ restants sont répartis selon la part de jetons.</p>
+    <p>Pourquoi ne pas partager les 600&#8239;€ au prorata des jetons ? Le joueur C recevrait 100&#8239;€, moins que les 120&#8239;€ qu’il est déjà sûr de toucher pour la troisième place. C’est pour cela qu’un chip chop paie d’abord à chacun le plus petit prix. L’ICM va un peu plus loin et transfère encore 9&#8239;€ du chip leader vers les deux plus petits tapis.</p>
+
+    <h2 id="how-icm-works">Comment se calculent les chiffres ICM</h2>
+    <p>L’ICM calcule, à partir des tapis, la probabilité de chaque joueur de finir premier, deuxième et troisième, puis multiplie chaque probabilité par le prix de la place correspondante. Voici le calcul pour le joueur A :</p>
+    <ol>
+      <li><b>Probabilité de finir premier</b> : c’est la part des jetons, 30&#8239;000 ÷ 60&#8239;000 = 50&#8239;%.</li>
+      <li><b>Probabilité de finir deuxième</b> : on additionne tous les cas où un autre joueur gagne. Si B gagne (1 chance sur 3), A détient 30&#8239;000 des 40&#8239;000 jetons restants, soit 75&#8239;%. Si C gagne (1 chance sur 6), A détient 30&#8239;000 des 50&#8239;000 restants, soit 60&#8239;%. On obtient 1/3 × 75&#8239;% + 1/6 × 60&#8239;% = 25&#8239;% + 10&#8239;% = 35&#8239;%.</li>
+      <li><b>Probabilité de finir troisième</b> : c’est ce qui reste, 100&#8239;% − 50&#8239;% − 35&#8239;% = 15&#8239;%.</li>
+      <li><b>Valeur ICM</b> : la somme de chaque probabilité multipliée par son prix, 50&#8239;% × 300&#8239;€ + 35&#8239;% × 180&#8239;€ + 15&#8239;% × 120&#8239;€ = 150&#8239;€ + 63&#8239;€ + 18&#8239;€ = 231&#8239;€.</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Joueur</th>
+            <th scope="col">Finit 1<sup>er</sup></th>
+            <th scope="col">Finit 2<sup>e</sup></th>
+            <th scope="col">Finit 3<sup>e</sup></th>
+            <th scope="col">Valeur ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50,0&#8239;%</td><td>35,0&#8239;%</td><td>15,0&#8239;%</td><td>231&#8239;€</td></tr>
+          <tr><th scope="row">B</th><td>33,3&#8239;%</td><td>40,0&#8239;%</td><td>26,7&#8239;%</td><td>204&#8239;€</td></tr>
+          <tr><th scope="row">C</th><td>16,7&#8239;%</td><td>25,0&#8239;%</td><td>58,3&#8239;%</td><td>165&#8239;€</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Il s’agit du modèle de Malmuth-Harville, la version de l’ICM qu’utilisent la plupart des calculateurs. Avec plus de joueurs, le nombre d’ordres d’arrivée possibles augmente vite (24 dès quatre joueurs), donc mieux vaut utiliser un calculateur.</p>
+
+    <h2 id="heads-up">En heads-up, l’ICM et le chip chop donnent le même résultat</h2>
+    <p>Quand il ne reste que deux joueurs, l’ICM et le chip chop donnent la même réponse. Prenons des prix de 300&#8239;€ et 180&#8239;€ et des tapis de 40&#8239;000 et 20&#8239;000 jetons. Chaque joueur prend 180&#8239;€, et les 120&#8239;€ restants sont partagés à deux contre un : le chip leader reçoit 260&#8239;€ et l’autre joueur 220&#8239;€.</p>
+
+    <h2 id="limits">Ce que l’ICM ne prend pas en compte</h2>
+    <ul>
+      <li><b>Le niveau de jeu.</b> Un joueur plus fort peut raisonnablement demander plus que ce que lui accorde l’ICM.</li>
+      <li><b>Les blinds et la position.</b> L’ICM ne regarde que les tapis, pas qui va payer la big blind ni le niveau des blinds. Pour vous entraîner au jeu à petit tapis en tenant compte des blinds et de la position, <a href="https://www.pushfoldtrainer.com/" target="_blank" rel="noopener">Push Fold Trainer</a> est un entraîneur push/fold gratuit pour les joueurs de tournoi (en anglais).</li>
+      <li><b>Ce que les joueurs acceptent.</b> Les joueurs arrondissent souvent les chiffres ou gardent une partie de l’argent à jouer. Considérez l’ICM comme une base de discussion, pas comme une règle.</li>
+    </ul>
+
+    <h2 id="in-blindclock">Faire un deal ICM dans BlindClock</h2>
+    <p>Les deals ICM font partie de <a href="support.html#faq-icm-chop">BlindClock Pro</a>. Ouvrez le calculateur de gains depuis l’écran de l’horloge, réglez <b>Mode de répartition</b> sur <b>Chop</b> et saisissez le tapis de chaque joueur. Vous pouvez aussi compter un tapis par valeur de jeton grâce à l’icône de jeton à côté d’un joueur. BlindClock calcule la part de chaque joueur jusqu’à 9 joueurs, arrondit à l’unité inférieure et attribue le reste au plus gros tapis, pour que la somme des gains corresponde exactement au prize pool. Si le tournoi a un tapis de départ défini, l’app vérifie aussi que les jetons saisis correspondent aux jetons en jeu avant de partager l’argent.</p>
+
+    <h2 id="faq">Questions fréquentes</h2>
+
+    <h3>Un deal ICM est-il équitable ?</h3>
+    <p>C’est la méthode la plus utilisée pour convertir des tapis en argent, et elle protège mieux les petits tapis qu’un simple partage au prorata des jetons. Elle ne tient compte ni du niveau de jeu ni des blinds, donc les joueurs sont libres de l’ajuster avant de se mettre d’accord.</p>
+
+    <h3>Quelle différence entre un deal ICM et un chip chop ?</h3>
+    <p>Un chip chop paie à chacun le plus petit prix restant, puis répartit le reste selon la part de jetons. Un deal ICM se base sur la probabilité de chaque joueur de finir à chaque place, ce qui transfère un peu d’argent du chip leader vers les plus petits tapis. Avec deux joueurs restants, les deux méthodes donnent le même résultat.</p>
+
+    <h3>L’ICM fonctionne-t-il avec plus de trois joueurs ?</h3>
+    <p>Oui. La méthode est la même, mais les calculs se compliquent vite, donc utilisez un calculateur. BlindClock gère jusqu’à 9 joueurs, soit une table finale complète.</p>
+
+    <h3>Tous les joueurs doivent-ils accepter le deal ?</h3>
+    <p>Oui. Un deal exige l’accord de tous les joueurs restants. Dans un casino ou un club, prévenez aussi le directeur de tournoi, car les règles sur les deals varient d’une maison à l’autre.</p>
+
+    <h3>Comment répartir les gains d’un tournoi entre amis sans deal ?</h3>
+    <p>Jusqu’à 10 joueurs, payez les trois premiers à 50/30/20 % du prize pool. De 11 à 20 joueurs, payez quatre places, environ 50/25/15/10. Notre guide sur <a href="how-to-run-a-home-poker-tournament.html">l’organisation d’un tournoi de poker entre amis</a> couvre les buy-ins, les gains et les jetons par joueur.</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">Essayer BlindClock</h2>
+    <p>Le calculateur de gains est gratuit. Les deals ICM avec comptage des jetons font partie de BlindClock Pro, un achat unique.</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">Télécharger dans l’App Store</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">Accueil</a>
+    <a href="support.html">Assistance</a>
+    <a href="privacy.html">Politique de confidentialité</a>
+    <a href="mailto:panshikai0117@gmail.com">Contact</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock est une app indépendante de timer de blinds et d’horloge de tournoi de poker pour iPhone et iPad.
+  </div>
+</footer>
+
+</body>
+</html>

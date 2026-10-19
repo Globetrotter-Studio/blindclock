@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>ICMチョップとは？ポーカートーナメントの賞金ディールの計算方法（計算例つき）| BlindClock</title>
+  <meta name="description" content="ポーカートーナメントで残ったプレイヤーが賞金を分けるとき、ICMチョップはどう計算するのか。均等割り、チップチョップ、ICMチョップを円の計算例で比べ、ICMの計算手順、ヘッズアップでの結果、ICMが考慮しないこと、BlindClockでの計算方法を説明します。">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated ja version of /icm-chop.html (not built from templates), amounts in JPY
+       (English example × 100). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/icm-chop.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/icm-chop.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/icm-chop.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/icm-chop.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/jp/icm-chop.html">
+  <meta property="og:title" content="ICMチョップとは？ポーカートーナメントの賞金ディールの計算方法">
+  <meta property="og:description" content="ポーカートーナメントで残ったプレイヤーが賞金を分けるとき、ICMチョップはどう計算するのか。均等割り、チップチョップ、ICMチョップを円の計算例で比べ、ICMの計算手順、ヘッズアップでの結果、ICMが考慮しないこと、BlindClockでの計算方法を説明します。">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BlindClock のアプリアイコンと名前、iPhone・iPad 用のポーカートーナメント用ブラインドタイマー">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICMチョップとは？ポーカートーナメントの賞金ディールの計算方法">
+  <meta name="twitter:description" content="ポーカートーナメントで残ったプレイヤーが賞金を分けるとき、ICMチョップはどう計算するのか。均等割り、チップチョップ、ICMチョップを円の計算例で比べ、ICMの計算手順、ヘッズアップでの結果、ICMが考慮しないこと、BlindClockでの計算方法を説明します。">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/jp/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/jp/icm-chop.html","headline":"ICMチョップとは：ポーカートーナメントの賞金ディールの計算方法","description":"ポーカートーナメントで残ったプレイヤーが賞金を分けるとき、ICMチョップはどう計算するのか。均等割り、チップチョップ、ICMチョップを円の計算例で比べ、ICMの計算手順、ヘッズアップでの結果、ICMが考慮しないこと、BlindClockでの計算方法を説明します。","image":"https://blindclock.app/assets/og.png","inLanguage":"ja","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">ホーム</a>
+      <a href="support.html">サポート</a>
+      <a href="privacy.html">プライバシー</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>ICMチョップとは：ポーカートーナメントの賞金ディールの計算方法</h1>
+  <p class="meta">2026年9月更新 · ホームゲームや小規模クラブ向けの計算例つき · <a href="../icm-chop.html" hreflang="en" lang="en">English</a> / <a href="../zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> / <a href="../ko/icm-chop.html" hreflang="ko" lang="ko">한국어</a> / <a href="../de/icm-chop.html" hreflang="de" lang="de">Deutsch</a> / <a href="../fr/icm-chop.html" hreflang="fr" lang="fr">Français</a> / <a href="../it/icm-chop.html" hreflang="it" lang="it">Italiano</a> / <a href="../pl/icm-chop.html" hreflang="pl" lang="pl">Polski</a> / <a href="../pt/icm-chop.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> / <a href="../es/icm-chop.html" hreflang="es-MX" lang="es-MX">Español (LA)</a> / <a href="../tr/icm-chop.html" hreflang="tr" lang="tr">Türkçe</a> / <a href="../vi/icm-chop.html" hreflang="vi" lang="vi">Tiếng Việt</a></p>
+
+  <div class="prose">
+
+    <p>ICMチョップとは、トーナメントで残ったプレイヤーがプレイをやめ、残りの賞金をインディペンデント・チップ・モデル（ICM）で分けるディールのことです。ICMは各プレイヤーのチップ量を、入賞する各順位に入る確率に置き換え、その確率に見合う金額の平均を各プレイヤーに支払います。チップ量の比率で分ける方法に比べると、ショートスタックには少し多く、チップリーダーには少し少なくなります。トーナメントでは、すでにチップを多く持っているほど、追加のチップ1枚の価値が下がるためです。</p>
+
+    <h2 id="when">ディールをするとき</h2>
+    <ul>
+      <li>トーナメント終盤はスタックに比べてブラインドが大きく、ほとんどのハンドがオールインになります。残ったプレイヤーは、特に夜遅くなると、プレイをやめて賞金を分けることに合意することがよくあります。</li>
+      <li>ディールには残っている全員の同意が必要です。1人でも反対すれば、そのままプレイを続けます。</li>
+      <li>計算する前に、賞金を全額分けるのか、一部を残してプレイを続けるのかを決めます。たとえば優勝者に¥5,000とトロフィーを残す、といった形です。金額は書き留めておきましょう。</li>
+      <li>カジノやクラブでは、合意する前にトーナメントディレクターに伝えてください。ハウスルールが適用される場合があります。</li>
+    </ul>
+
+    <h2 id="three-ways">賞金の分け方は3通り</h2>
+    <ul>
+      <li><b>均等割り。</b>全員が同じ額を受け取ります。簡単ですが、チップ量を考慮しないので、スタックが近いときにしか公平に感じられません。</li>
+      <li><b>チップチョップ。</b>まず全員が、まだ支払われていない最も低い賞金を受け取り、残りを各プレイヤーのチップ比率で分けます。手計算でも簡単です。</li>
+      <li><b>ICMチョップ。</b>全員が自分のスタックのICM価値を受け取ります。3人以上残っている場合は計算機が必要です。</li>
+    </ul>
+
+    <h2 id="example">計算例：残り3人</h2>
+    <p>12人がそれぞれ¥5,000を払ったので、賞金プールは¥60,000、賞金は¥30,000、¥18,000、¥12,000です。場にあるチップ60,000点をすべて持った3人が残っています。</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">プレイヤー</th>
+            <th scope="col">チップ</th>
+            <th scope="col">チップ比率</th>
+            <th scope="col">均等割り</th>
+            <th scope="col">チップチョップ</th>
+            <th scope="col">ICMチョップ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30,000</td><td>50.0%</td><td>¥20,000</td><td>¥24,000</td><td>¥23,100</td></tr>
+          <tr><th scope="row">B</th><td>20,000</td><td>33.3%</td><td>¥20,000</td><td>¥20,000</td><td>¥20,400</td></tr>
+          <tr><th scope="row">C</th><td>10,000</td><td>16.7%</td><td>¥20,000</td><td>¥16,000</td><td>¥16,500</td></tr>
+          <tr><th scope="row">合計</th><td>60,000</td><td>100%</td><td>¥60,000</td><td>¥60,000</td><td>¥60,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">チップチョップ：各プレイヤーが3位賞金の¥12,000を受け取り、残りの¥24,000をチップ比率で分けます。</p>
+    <p>¥60,000全額をチップ比率で分けないのはなぜでしょうか。その場合プレイヤーCは¥10,000となり、3位ですでに確定している¥12,000より少なくなってしまいます。だからチップチョップでは、まず全員に最も低い賞金を支払います。ICMはさらに一歩進めて、チップリーダーからショートの2人へ、さらに¥900を移します。</p>
+
+    <h2 id="how-icm-works">ICMの数字の計算方法</h2>
+    <p>ICMはチップ量から各プレイヤーが1位、2位、3位になる確率を求め、それぞれの確率にその順位の賞金を掛けます。プレイヤーAの場合は次のとおりです。</p>
+    <ol>
+      <li><b>1位になる確率</b>はチップ比率です：30,000 ÷ 60,000 = 50%。</li>
+      <li><b>2位になる確率</b>は、ほかのプレイヤーが1位になる場合をすべて足し合わせます。Bが1位（確率3分の1）なら、Aは残り40,000点のうち30,000点を持っているので75%。Cが1位（確率6分の1）なら、残り50,000点のうち30,000点なので60%。したがって 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35% です。</li>
+      <li><b>3位になる確率</b>は残りです：100% − 50% − 35% = 15%。</li>
+      <li><b>ICM価値</b>は各確率に賞金を掛けて合計したものです：50% × ¥30,000 + 35% × ¥18,000 + 15% × ¥12,000 = ¥15,000 + ¥6,300 + ¥1,800 = ¥23,100。</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">プレイヤー</th>
+            <th scope="col">1位</th>
+            <th scope="col">2位</th>
+            <th scope="col">3位</th>
+            <th scope="col">ICM価値</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50.0%</td><td>35.0%</td><td>15.0%</td><td>¥23,100</td></tr>
+          <tr><th scope="row">B</th><td>33.3%</td><td>40.0%</td><td>26.7%</td><td>¥20,400</td></tr>
+          <tr><th scope="row">C</th><td>16.7%</td><td>25.0%</td><td>58.3%</td><td>¥16,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>これはマルムス・ハービル（Malmuth-Harville）モデルで、多くの計算機が使っているICMです。人数が増えると順位の並び方は急速に増える（4人ですでに24通り）ので、計算機を使いましょう。</p>
+
+    <h2 id="heads-up">ヘッズアップではICMとチップチョップが一致する</h2>
+    <p>残り2人のときは、ICMとチップチョップの答えは同じになります。賞金が¥30,000と¥18,000、スタックが40,000と20,000だとします。各プレイヤーがまず¥18,000を受け取り、残りの¥12,000を2対1で分けるので、チップリーダーが¥26,000、もう1人が¥22,000です。</p>
+
+    <h2 id="limits">ICMが考慮しないこと</h2>
+    <ul>
+      <li><b>腕前。</b>実力のあるプレイヤーが、ICMの金額より多くを求めるのは無理のないことです。</li>
+      <li><b>ブラインドとポジション。</b>ICMが見るのはチップ量だけで、次に誰がビッグブラインドを払うかや、ブラインドの大きさは考慮しません。ブラインドとポジションを含めてショートスタックのプレイを練習したいなら、トーナメントプレイヤー向けの無料プッシュ/フォールド練習ツール <a href="https://www.pushfoldtrainer.com/" target="_blank" rel="noopener">Push Fold Trainer</a>（英語）があります。</li>
+      <li><b>全員が納得する金額。</b>実際には端数を丸めたり、一部の賞金を残してプレイを続けたりすることがよくあります。ICMはルールではなく、話し合いの出発点と考えてください。</li>
+    </ul>
+
+    <h2 id="in-blindclock">BlindClockでの計算方法</h2>
+    <p>ICMチョップは<a href="support.html#faq-icm-chop">BlindClock Pro</a>の機能です。クロック画面からペイアウト計算を開き、<b>分配方法</b>を<b>チョップ</b>にして、各プレイヤーのチップ数を入力します。プレイヤーの横にあるチップアイコンから、スタックを額面ごとにカウントすることもできます。BlindClockは最大9人まで各プレイヤーの取り分を計算し、金額は整数に切り捨て、端数は最も大きいスタックに渡すので、支払額の合計が賞金プールとぴったり一致します。トーナメントにスタートスタックが設定されていれば、賞金を分ける前に、入力したチップが場のチップと一致しているかも確認します。</p>
+
+    <h2 id="faq">よくある質問</h2>
+
+    <h3>ICMチョップは公平ですか？</h3>
+    <p>チップ量を金額に換算する方法として最も広く使われており、単純なチップ比率の分配よりショートスタックを守ります。ただし腕前やブラインドは考慮しないので、合意する前にプレイヤー同士で調整してかまいません。</p>
+
+    <h3>ICMチョップとチップチョップの違いは？</h3>
+    <p>チップチョップは全員に残っている最も低い賞金を支払い、残りをチップ比率で分けます。ICMチョップは各プレイヤーが各順位に入る確率を使うので、チップリーダーからショートスタックへ少しお金が移ります。残り2人なら結果は同じです。</p>
+
+    <h3>4人以上でもICMは使えますか？</h3>
+    <p>使えます。方法は同じですが計算量が急に増えるので、計算機を使いましょう。BlindClockはファイナルテーブルいっぱいの9人まで対応しています。</p>
+
+    <h3>チョップには全員の同意が必要ですか？</h3>
+    <p>はい。ディールには残っている全員の同意が必要です。カジノやクラブではディールに関するハウスルールが異なるので、トーナメントディレクターにも伝えてください。</p>
+
+    <h3>ディールの前、ホームトーナメントの賞金配分はどうすればいいですか？</h3>
+    <p>参加者が10人以下なら上位3人に賞金プールの50/30/20%、11〜20人なら上位4人におよそ50/25/15/10%を配分します。詳しくは<a href="support.html#faq-payout-structure">サポートページのよくある質問</a>をご覧ください。</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">BlindClockを使ってみる</h2>
+    <p>ペイアウト計算は無料です。チップカウント付きのICMチョップはBlindClock Proの機能で、Proは一度きりの買い切りです。</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">App Storeでダウンロード</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">ホーム</a>
+    <a href="support.html">サポート</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="mailto:panshikai0117@gmail.com">お問い合わせ</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock は、iPhone・iPad 向けの個人開発のポーカートーナメント用ブラインドタイマー(トーナメントクロック)アプリです。
+  </div>
+</footer>
+
+</body>
+</html>

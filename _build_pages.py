@@ -62,7 +62,9 @@ EXTRA_EN_PAGES = ["how-to-run-a-home-poker-tournament.html", "best-poker-timer-a
 EXTRA_TRANSLATIONS = {
     "best-poker-timer-apps.html": {"zh-Hant": "zh/best-poker-timer-apps.html"},
     "poker-clock-on-tv.html": {"zh-Hant": "zh/poker-clock-on-tv.html"},
-    "icm-chop.html": {"zh-Hant": "zh/icm-chop.html"},
+    "icm-chop.html": {c: "%s/icm-chop.html" % s for c, s in [
+        ("zh-Hant", "zh"), ("ja", "jp"), ("ko", "ko"), ("de", "de"), ("fr-FR", "fr"), ("it", "it"),
+        ("pl", "pl"), ("pt-BR", "pt"), ("es-MX", "es"), ("tr", "tr"), ("vi", "vi")]},
 }
 
 # code (matches BC_STRINGS / _meta_i18n.json), URL slug, BCP-47 hreflang,
@@ -425,7 +427,7 @@ Key features: blind structure generator, time bank, payout calculator, Live Acti
 - [Best poker timer apps for iPhone and iPad](%s/best-poker-timer-apps.html): comparison of seven options (PokerTimer, BlindClock, TablePilot, Easy Poker Timer, Poker Club HQ, Felt, NextBlind web) on price, structure generators, TV display, payouts and ICM, player tracking and Lock Screen support, plus Android, Windows and browser alternatives; written by the BlindClock developer
 - [iPhone 與 iPad 德州撲克盲注計時器 App 比較](%s/zh/best-poker-timer-apps.html): Traditional Chinese version of the comparison, with Taiwan App Store prices (NT$), which apps have a Traditional Chinese interface, and which are not sold in Taiwan
 - [How to put a poker clock on your TV](%s/poker-clock-on-tv.html): AirPlay vs HDMI adapters for iPhone and iPad, step-by-step setup, mirroring vs a dedicated TV layout, what BlindClock's Big Screen Mode shows (Pro), and fixes when the TV won't connect (English; Traditional Chinese version at /zh/poker-clock-on-tv.html)
-- [ICM chop explained](%s/icm-chop.html): how to split a poker tournament prize pool when players make a deal, with a worked three-player example comparing an even split, a chip chop and an ICM chop, the Malmuth-Harville math step by step, and why heads-up ICM equals a chip chop (English; Traditional Chinese version with NT$ amounts at /zh/icm-chop.html)
+- [ICM chop explained](%s/icm-chop.html): how to split a poker tournament prize pool when players make a deal, with a worked three-player example comparing an even split, a chip chop and an ICM chop, the Malmuth-Harville math step by step, and why heads-up ICM equals a chip chop (English original; translated into all 11 other site languages at /<slug>/icm-chop.html, with amounts in local currency)
 - [Privacy Policy](%s/privacy.html): no account, no ads, anonymous analytics only
 
 ## App Store

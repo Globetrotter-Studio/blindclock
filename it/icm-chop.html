@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2019">
+  <meta name="apple-itunes-app" content="app-id=6775924424">
+  <title>Chop ICM: come dividere il montepremi di un torneo di poker | BlindClock</title>
+  <meta name="description" content="Come funziona un chop ICM quando i giocatori rimasti fanno un accordo. Esempio in euro che confronta divisione in parti uguali, chip chop e ICM, con il calcolo passo per passo.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css?v=2.5">
+  <!-- Hand-translated Italian version of /icm-chop.html (not built from templates), amounts in EUR
+       (English example × 1). Registered in _build_pages.py EXTRA_TRANSLATIONS. -->
+  <link rel="canonical" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="en" href="https://blindclock.app/icm-chop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://blindclock.app/zh/icm-chop.html">
+  <link rel="alternate" hreflang="ja" href="https://blindclock.app/jp/icm-chop.html">
+  <link rel="alternate" hreflang="ko" href="https://blindclock.app/ko/icm-chop.html">
+  <link rel="alternate" hreflang="de" href="https://blindclock.app/de/icm-chop.html">
+  <link rel="alternate" hreflang="fr" href="https://blindclock.app/fr/icm-chop.html">
+  <link rel="alternate" hreflang="it" href="https://blindclock.app/it/icm-chop.html">
+  <link rel="alternate" hreflang="pl" href="https://blindclock.app/pl/icm-chop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://blindclock.app/pt/icm-chop.html">
+  <link rel="alternate" hreflang="es-MX" href="https://blindclock.app/es/icm-chop.html">
+  <link rel="alternate" hreflang="tr" href="https://blindclock.app/tr/icm-chop.html">
+  <link rel="alternate" hreflang="vi" href="https://blindclock.app/vi/icm-chop.html">
+  <link rel="alternate" hreflang="x-default" href="https://blindclock.app/icm-chop.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BlindClock">
+  <meta property="og:url" content="https://blindclock.app/it/icm-chop.html">
+  <meta property="og:title" content="Chop ICM: come dividere il montepremi di un torneo di poker">
+  <meta property="og:description" content="Come funziona un chop ICM quando i giocatori rimasti fanno un accordo. Esempio in euro che confronta divisione in parti uguali, chip chop e ICM, con il calcolo passo per passo.">
+  <meta property="og:image" content="https://blindclock.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Icona e nome dell’app BlindClock, timer dei bui per tornei di poker su iPhone e iPad">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chop ICM: come dividere il montepremi di un torneo di poker">
+  <meta name="twitter:description" content="Come funziona un chop ICM quando i giocatori rimasti fanno un accordo. Esempio in euro che confronta divisione in parti uguali, chip chop e ICM, con il calcolo passo per passo.">
+  <meta name="twitter:image" content="https://blindclock.app/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blindclock.app/#org","name":"Globetrotter Studio","url":"https://blindclock.app/","email":"panshikai0117@gmail.com","logo":"https://blindclock.app/assets/icon-large.png"},{"@type":"Article","@id":"https://blindclock.app/it/icm-chop.html#article","mainEntityOfPage":"https://blindclock.app/it/icm-chop.html","headline":"Chop ICM spiegato: come dividere il montepremi di un torneo di poker","description":"Come funziona un chop ICM quando i giocatori rimasti fanno un accordo. Esempio in euro che confronta divisione in parti uguali, chip chop e ICM, con il calcolo passo per passo.","image":"https://blindclock.app/assets/og.png","inLanguage":"it","datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@id":"https://blindclock.app/#org"},"publisher":{"@id":"https://blindclock.app/#org"}}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="../assets/icon.png" alt="BlindClock icon" width="30" height="30">
+      BlindClock
+    </a>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="support.html">Supporto</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container page">
+
+  <h1>Chop ICM spiegato: come dividere il montepremi di un torneo di poker</h1>
+  <p class="meta">Aggiornato a settembre 2026 · Esempi pratici per partite tra amici e piccoli club · <a href="../icm-chop.html" hreflang="en" lang="en">English</a> / <a href="../zh/icm-chop.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> / <a href="../jp/icm-chop.html" hreflang="ja" lang="ja">日本語</a> / <a href="../ko/icm-chop.html" hreflang="ko" lang="ko">한국어</a> / <a href="../de/icm-chop.html" hreflang="de" lang="de">Deutsch</a> / <a href="../fr/icm-chop.html" hreflang="fr" lang="fr">Français</a> / <a href="../pl/icm-chop.html" hreflang="pl" lang="pl">Polski</a> / <a href="../pt/icm-chop.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> / <a href="../es/icm-chop.html" hreflang="es-MX" lang="es-MX">Español (LA)</a> / <a href="../tr/icm-chop.html" hreflang="tr" lang="tr">Türkçe</a> / <a href="../vi/icm-chop.html" hreflang="vi" lang="vi">Tiếng Việt</a></p>
+
+  <div class="prose">
+
+    <p>Un chop ICM è un accordo in cui i giocatori rimasti in un torneo smettono di giocare e si dividono il montepremi restante usando l’Independent Chip Model (ICM). L’ICM trasforma lo stack di ogni giocatore nella probabilità di arrivare in ciascuna posizione a premio e gli assegna la media di quanto valgono quelle probabilità. Rispetto a una divisione in base alle chip, dà qualcosa in più agli short stack e qualcosa in meno al chip leader, perché in un torneo ogni chip in più vale meno quante più chip hai già.</p>
+
+    <h2 id="when">Quando i giocatori fanno un accordo</h2>
+    <ul>
+      <li>Nelle fasi finali di un torneo i bui sono alti rispetto agli stack e quasi ogni mano finisce in un all-in. Spesso i giocatori rimasti decidono di fermarsi e dividere i soldi, soprattutto quando si è fatto tardi.</li>
+      <li>Per un accordo serve il consenso di tutti i giocatori rimasti. Se anche uno solo dice di no, si continua a giocare.</li>
+      <li>Prima di fare i conti, decidete se dividere tutto il montepremi o lasciare qualcosa in palio, per esempio 50 € e un trofeo per il vincitore. Scrivete le cifre.</li>
+      <li>In un casinò o in un club, avvisate il direttore del torneo prima di accordarvi. Possono valere le regole della sala.</li>
+    </ul>
+
+    <h2 id="three-ways">Tre modi per dividere il montepremi</h2>
+    <ul>
+      <li><b>Divisione in parti uguali.</b> Tutti ricevono la stessa cifra. È semplice, ma ignora gli stack, quindi sembra giusta solo quando gli stack sono simili.</li>
+      <li><b>Chip chop.</b> Ognuno prende prima il premio più basso ancora da assegnare, poi il resto si divide in proporzione alle chip di ciascuno. Si fa facilmente a mano.</li>
+      <li><b>Chop ICM.</b> Ognuno riceve il valore ICM del proprio stack. Con più di due giocatori rimasti serve un calcolatore.</li>
+    </ul>
+
+    <h2 id="example">Esempio pratico: tre giocatori rimasti</h2>
+    <p>Dodici giocatori hanno pagato 50 € ciascuno, quindi il montepremi è di 600 €, con premi da 300 €, 180 € e 120 €. Restano tre giocatori con tutte le 60.000 chip in gioco:</p>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Giocatore</th>
+            <th scope="col">Chip</th>
+            <th scope="col">Quota di chip</th>
+            <th scope="col">Parti uguali</th>
+            <th scope="col">Chip chop</th>
+            <th scope="col">Chop ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>30.000</td><td>50,0%</td><td>200 €</td><td>240 €</td><td>231 €</td></tr>
+          <tr><th scope="row">B</th><td>20.000</td><td>33,3%</td><td>200 €</td><td>200 €</td><td>204 €</td></tr>
+          <tr><th scope="row">C</th><td>10.000</td><td>16,7%</td><td>200 €</td><td>160 €</td><td>165 €</td></tr>
+          <tr><th scope="row">Totale</th><td>60.000</td><td>100%</td><td>600 €</td><td>600 €</td><td>600 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Chip chop: ogni giocatore prende i 120 € del terzo premio, poi gli altri 240 € si dividono in proporzione alle chip.</p>
+    <p>Perché non dividere tutti i 600 € in base alle chip? Il giocatore C riceverebbe 100 €, meno dei 120 € che ha già in tasca per il terzo posto. Per questo il chip chop paga prima a tutti il premio più basso. L’ICM fa un passo in più e sposta altri 9 € dal chip leader ai due stack più corti.</p>
+
+    <h2 id="how-icm-works">Come si calcolano i valori ICM</h2>
+    <p>L’ICM ricava dagli stack la probabilità di ogni giocatore di arrivare primo, secondo e terzo, poi moltiplica ogni probabilità per il premio di quella posizione. Ecco il giocatore A:</p>
+    <ol>
+      <li><b>La probabilità di arrivare primo</b> è la quota di chip: 30.000 ÷ 60.000 = 50%.</li>
+      <li><b>La probabilità di arrivare secondo</b> somma tutti i casi in cui vince un altro giocatore. Se vince B (probabilità 1 su 3), A ha 30.000 delle 40.000 chip rimaste, quindi il 75%. Se vince C (1 su 6), A ha 30.000 delle 50.000 rimaste, quindi il 60%. Risultato: 1/3 × 75% + 1/6 × 60% = 25% + 10% = 35%.</li>
+      <li><b>La probabilità di arrivare terzo</b> è quello che resta: 100% − 50% − 35% = 15%.</li>
+      <li><b>Il valore ICM</b> è la somma di ogni probabilità per il suo premio: 50% × 300 € + 35% × 180 € + 15% × 120 € = 150 € + 63 € + 18 € = 231 €.</li>
+    </ol>
+    <div class="table-wrap wide">
+      <table class="compare compact">
+        <thead>
+          <tr>
+            <th scope="col">Giocatore</th>
+            <th scope="col">1° posto</th>
+            <th scope="col">2° posto</th>
+            <th scope="col">3° posto</th>
+            <th scope="col">Valore ICM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A</th><td>50,0%</td><td>35,0%</td><td>15,0%</td><td>231 €</td></tr>
+          <tr><th scope="row">B</th><td>33,3%</td><td>40,0%</td><td>26,7%</td><td>204 €</td></tr>
+          <tr><th scope="row">C</th><td>16,7%</td><td>25,0%</td><td>58,3%</td><td>165 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Questo è il modello Malmuth-Harville, la versione dell’ICM usata dalla maggior parte dei calcolatori. Con più giocatori il numero di ordini di arrivo possibili cresce in fretta (con quattro giocatori sono già 24), quindi conviene usare un calcolatore.</p>
+
+    <h2 id="heads-up">Heads-up: ICM e chip chop coincidono</h2>
+    <p>Con due giocatori rimasti, ICM e chip chop danno lo stesso risultato. Supponiamo premi da 300 € e 180 € e stack da 40.000 e 20.000. Ognuno prende 180 € e gli altri 120 € si dividono due a uno, quindi il chip leader riceve 260 € e l’altro giocatore 220 €.</p>
+
+    <h2 id="limits">Cosa l’ICM non considera</h2>
+    <ul>
+      <li><b>L’abilità.</b> Un giocatore più forte può chiedere, con buone ragioni, più di quanto gli dia l’ICM.</li>
+      <li><b>Bui e posizione.</b> L’ICM guarda solo gli stack, non chi sta per pagare il big blind né quanto sono alti i bui. Se vuoi allenarti a giocare short stack tenendo conto di bui e posizione, <a href="https://www.pushfoldtrainer.com/" target="_blank" rel="noopener">Push Fold Trainer</a> è un trainer gratuito di push/fold per giocatori di torneo (in inglese).</li>
+      <li><b>Quello su cui ci si accorda.</b> Spesso i giocatori arrotondano le cifre o lasciano qualcosa in palio. Considerate l’ICM come punto di partenza della discussione, non come una regola.</li>
+    </ul>
+
+    <h2 id="in-blindclock">Come farlo in BlindClock</h2>
+    <p>Il chop ICM fa parte di <a href="support.html#faq-icm-chop">BlindClock Pro</a>. Apri il <b>Calcolatore premi</b> dalla schermata del timer, imposta <b>Metodo di divisione</b> su <b>Chop</b> e inserisci lo stack di ogni giocatore. Puoi anche contare uno stack per taglio di chip con l’icona delle chip accanto al giocatore. BlindClock calcola la quota di ciascuno fino a 9 giocatori, arrotonda per difetto a cifre intere e assegna il resto allo stack più grande, così i premi sommano esattamente il montepremi. Se per il torneo è impostato uno stack iniziale, controlla anche che le chip inserite corrispondano a quelle in gioco prima di dividere i soldi.</p>
+
+    <h2 id="faq">Domande frequenti</h2>
+
+    <h3>Il chop ICM è equo?</h3>
+    <p>È il metodo più usato per trasformare gli stack in soldi e tutela gli short stack meglio di una semplice divisione in base alle chip. Non tiene conto dell’abilità né dei bui, quindi i giocatori sono liberi di correggerlo prima di accordarsi.</p>
+
+    <h3>Che differenza c’è tra chop ICM e chip chop?</h3>
+    <p>Il chip chop paga a tutti il premio più basso rimasto, poi divide il resto in proporzione alle chip. Il chop ICM usa la probabilità di ogni giocatore di arrivare in ciascuna posizione, e questo sposta un po’ di soldi dal chip leader agli stack più corti. Con due giocatori rimasti il risultato è lo stesso.</p>
+
+    <h3>L’ICM funziona con più di tre giocatori?</h3>
+    <p>Sì. Il metodo è lo stesso, ma i calcoli crescono in fretta, quindi conviene usare un calcolatore. BlindClock gestisce fino a 9 giocatori, un tavolo finale completo.</p>
+
+    <h3>Tutti i giocatori devono essere d’accordo per un chop?</h3>
+    <p>Sì. Un accordo richiede il consenso di tutti i giocatori rimasti. In un casinò o in un club avvisate anche il direttore del torneo, perché le regole sugli accordi cambiano da sala a sala.</p>
+
+    <h3>Come si distribuiscono i premi in un torneo tra amici, senza accordi?</h3>
+    <p>Fino a 10 giocatori, pagate i primi tre con il 50/30/20 percento del montepremi. Da 11 a 20 giocatori, pagate quattro posizioni, circa 50/25/15/10. La nostra guida su <a href="../how-to-run-a-home-poker-tournament.html" hreflang="en">come organizzare un torneo di poker in casa</a> (in inglese) spiega buy-in, premi e chip per giocatore.</p>
+
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin:0 0 4px;">Prova BlindClock</h2>
+    <p>Il calcolatore premi è gratuito. Il chop ICM con il conteggio delle chip fa parte di BlindClock Pro, un acquisto una tantum.</p>
+    <a class="mail-btn" href="https://apps.apple.com/app/apple-store/id6775924424?pt=126991712&amp;ct=web&amp;mt=8">Scarica su App Store</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="./">Home</a>
+    <a href="support.html">Supporto</a>
+    <a href="privacy.html">Informativa sulla privacy</a>
+    <a href="mailto:panshikai0117@gmail.com">Contatti</a>
+  </div>
+  <div>© 2026 globetrotter-studio ·
+    BlindClock è un’app indipendente: timer dei bui e orologio da torneo di poker per iPhone e iPad.
+  </div>
+</footer>
+
+</body>
+</html>
